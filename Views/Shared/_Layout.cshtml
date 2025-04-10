@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -19,15 +22,23 @@
                 <!-- Logo y Home -->
                 <a class="navbar-brand d-flex align-items-center" asp-area="" asp-controller="Home" asp-action="Index">
                     <img src="~/images/nasa-logo.png" alt="NASA" width="50" class="me-2" />
-                    <span class="text-white fw-normal">Home</span>
+                    <span class="text-white fw-normal">@Localizer["Home"]</span>
                 </a>
 
                 <!-- Opciones a la derecha -->
                 <div class="ms-auto d-flex align-items-center gap-3">
-                    <a href="#" class="text-white text-decoration-none">
-                        <i class="bi bi-globe"></i> English <i class="bi bi-caret-down-fill"></i>
-                    </a>
-                    <a href="#" class="btn btn-primary">Sign in</a>
+                   
+                    <div class="dropdown">
+                        <a class="nav-link dropdown-toggle text-white bi bi-globe" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            @Localizer["Language"]
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="?lang=en">@Localizer["English"]</a></li>
+                            <li><a class="dropdown-item" href="?lang=es">@Localizer["Spanish"]</a></li>
+                            <li><a class="dropdown-item" href="?lang=fr">@Localizer["French"]</a></li>
+                        </ul>
+                    </div>
+                    <a asp-controller="Account" asp-action="LoginIris" class="btn btn-primary">@Localizer["SignIn"]</a>
                 </div>
             </div>
         </nav>
