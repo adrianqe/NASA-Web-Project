@@ -1,82 +1,68 @@
-﻿@{
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@{
     ViewBag.HideSignInButton = true;
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <title>Sign In - NASA</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-        }
+<style>
+    .split-screen {
+        display: flex;
+        height: 100vh;
+    }
 
-        .split-screen {
-            display: flex;
-            height: 100vh;
-        }
-
-        .left-side {
-            background-color: white;
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    .left-side {
+        background-color: white;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
         .left-side img {
             width: 50%;
         }
 
-        .right-side {
-            background-color: #f8f8f8;
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            padding: 2rem;
-        }
+    .right-side {
+        background-color: #f8f8f8;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 2rem;
+    }
 
-        .login-box {
-            text-align: center;
-            width: 100%;
-            max-width: 400px;
-        }
+    .login-box {
+        text-align: center;
+        width: 100%;
+        max-width: 400px;
+    }
 
         .login-box h2 {
             font-weight: bold;
             margin-bottom: 1rem;
         }
 
-        .login-box .icon {
-            font-size: 48px;
-            margin-bottom: 1rem;
-        }
-
-        .btn-scan {
-            background-color: #0033a0;
-            color: white;
-            border: none;
-            padding: 0.75rem 1.5rem;
-            font-weight: bold;
-            border-radius: 6px;
-            margin-bottom: 1rem;
-        }
+    .btn-scan {
+        background-color: #0033a0;
+        color: white;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        font-weight: bold;
+        border-radius: 6px;
+        margin-bottom: 1rem;
+    }
 
         .btn-scan:hover {
             background-color: #002080;
         }
 
-        .divider {
-            display: flex;
-            align-items: center;
-            text-align: center;
-            margin: 1.5rem 0;
-        }
+    .divider {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin: 1.5rem 0;
+    }
 
         .divider::before,
         .divider::after {
@@ -94,28 +80,30 @@
             margin-left: 0.5em;
         }
 
-        .login-box a {
-            font-size: 0.9rem;
-            text-decoration: underline;
-        }
-
-    </style>
-</head>
-<body>
-    <div class="split-screen">
-        <div class="left-side">
-            <img src="https://1000logos.net/wp-content/uploads/2017/03/NASA-Logo-2020.png" alt="NASA Logo" />
-        </div>
-        <div class="right-side">
-            <div class="login-box">
-                <h2>Sign In</h2>
-                <div class="mt-4"><img src="~/images/fingerprint.png" alt="Scan Iris" width="50" class="me-2" /> </div>
-                <button class="btn-scan mt-4">Scan your fingerprint</button>
-                <div class="divider">or</div>
-                <a href="@Url.Action("LoginIris", "Account")">Sign in with Iris</a>
-
-            </div>
+    .login-box a {
+        font-size: 0.9rem;
+        text-decoration: underline;
+    }
+</style>
+<div class="split-screen">
+    <div class="left-side">
+        <img src="https://1000logos.net/wp-content/uploads/2017/03/NASA-Logo-2020.png" alt="NASA Logo" />
+    </div>
+    <div class="right-side">
+        <div class="login-box">
+            <h2>@Localizer["SignIn"]</h2>
+            <div class="mt-4"><img src="~/images/fingerprint.png" alt="Fingerprint" width="50" class="me-2" /> </div>
+            <button id="scanButton" class="btn-scan mt-4">@Localizer["ScanYourFingerprint"]</button>
+            <div class="divider">@Localizer["Or"]</div>
+            <a href="@Url.Action("LoginIris", "Account")">@Localizer["SignInWithIris"]</a>
         </div>
     </div>
-</body>
-</html>
+</div>
+
+@section Scripts {
+    <script>
+        document.getElementById('scanButton').addEventListener('click', function() {
+            window.location.href = '@Url.Action("Modules", "Dashboard")';
+        });
+    </script>
+}

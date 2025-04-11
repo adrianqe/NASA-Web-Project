@@ -1,5 +1,5 @@
 ﻿@using Microsoft.AspNetCore.Mvc.Localization
-@inject IViewLocalizer Localizer
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer Localizer
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
-
+     
 </head>
 <body>
     <header>
@@ -27,18 +27,50 @@
 
                 <!-- Opciones a la derecha -->
                 <div class="ms-auto d-flex align-items-center gap-3">
-                   
+
+                    <!-- Dropdown de idioma -->
                     <div class="dropdown">
                         <a class="nav-link dropdown-toggle text-white bi bi-globe" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             @Localizer["Language"]
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="?lang=en">@Localizer["English"]</a></li>
-                            <li><a class="dropdown-item" href="?lang=es">@Localizer["Spanish"]</a></li>
-                            <li><a class="dropdown-item" href="?lang=fr">@Localizer["French"]</a></li>
+                            <form id="langForm-en" method="post" asp-controller="Culture" asp-action="SetLanguage">
+                                <input type="hidden" name="culture" value="en" />
+                                <input type="hidden" name="returnUrl" value="@Context.Request.Path" />
+                                @Html.AntiForgeryToken()
+                                <button type="submit" class="dropdown-item">@Localizer["English"]</button>
+                            </form>
+
+                            <form id="langForm-es" method="post" asp-controller="Culture" asp-action="SetLanguage">
+                                <input type="hidden" name="culture" value="es" />
+                                <input type="hidden" name="returnUrl" value="@Context.Request.Path" />
+                                @Html.AntiForgeryToken()
+                                <button type="submit" class="dropdown-item">@Localizer["Spanish"]</button>
+                            </form>
+
+                            <form id="langForm-fr" method="post" asp-controller="Culture" asp-action="SetLanguage">
+                                <input type="hidden" name="culture" value="fr" />
+                                <input type="hidden" name="returnUrl" value="@Context.Request.Path" />
+                                @Html.AntiForgeryToken()
+                                <button type="submit" class="dropdown-item">@Localizer["French"]</button>
+                            </form>
                         </ul>
                     </div>
-                    <a asp-controller="Account" asp-action="LoginIris" class="btn btn-primary">@Localizer["SignIn"]</a>
+
+                    <div class="ms-auto d-flex align-items-center gap-3">
+                        <!-- Para depuración: muestra el idioma actual -->
+                        <span class="text-white small">
+                            Current: @System.Globalization.CultureInfo.CurrentCulture.Name
+                        </span>
+
+                        <!-- Resto del código... -->
+                    </div>
+
+                    @if (ViewBag.HideSignInButton == null || ViewBag.HideSignInButton == false)
+                    {
+                        <a asp-controller="Account" asp-action="LoginIris" class="btn btn-primary">@Localizer["SignIn"]</a>
+                    }
+
                 </div>
             </div>
         </nav>
