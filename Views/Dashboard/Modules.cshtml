@@ -1,0 +1,137 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@{
+    ViewData["Title"] = Localizer["ModulesTitle"];
+}
+
+<style>
+    .module-card {
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+        height: 250px;
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+        .module-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+    .module-image {
+        height: 200px; /* Increased height to fill the card better */
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block; /* Removes any inherent spacing */
+    }
+
+    .module-title-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 15px;
+        background-color: #f8f9fa;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 50px; /* Fixed height for title container */
+        margin: 0; /* Remove any margin */
+    }
+
+    .module-title {
+        font-size: 16px;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .module-arrow {
+        color: #0033a0;
+    }
+
+    /* For the centered last row */
+    .justify-center {
+        justify-content: center;
+    }
+
+    .last-row-item {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+</style>
+
+<div class="container mt-5">
+    <h1 class="text-center mb-5">@Localizer["SelectModule"]</h1>
+
+    <div class="row g-4">
+        <!-- First row - Human Resources, Finance, Space Missions -->
+        <div class="col-md-4">
+            <div class="module-card">
+                <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/M18d7e580375798fc2200ceafaa9081911742583873695" class="module-image" alt="Human Resources">
+                <div class="module-title-container">
+                    <h3 class="module-title">@Localizer["HumanResources"]</h3>
+                    <i class="bi bi-arrow-right module-arrow"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="module-card">
+                <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/Md98a6cd715f18676e548919a403dac701742584608207" class="module-image" alt="Finance">
+                <div class="module-title-container">
+                    <h3 class="module-title">@Localizer["Finance"]</h3>
+                    <i class="bi bi-arrow-right module-arrow"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="module-card">
+                <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/Mfe6a096a555925ec892723fa3c8c6e051742513866796" class="module-image" alt="Space Missions">
+                <div class="module-title-container">
+                    <h3 class="module-title">@Localizer["SpaceMissions"]</h3>
+                    <i class="bi bi-arrow-right module-arrow"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second row - Experiments and Research Programs (centered) -->
+    <div class="row g-4 justify-center">
+        <div class="col-md-4 last-row-item">
+            <div class="module-card">
+                <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/Mb080d77b3150088311f08751cad070f31742513867385" class="module-image" alt="Experiments">
+                <div class="module-title-container">
+                    <h3 class="module-title">@Localizer["Experiments"]</h3>
+                    <i class="bi bi-arrow-right module-arrow"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 last-row-item">
+            <div class="module-card">
+                <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/Mcb267048e88aaa888c05b58a3cdaa1251742514206608" class="module-image" alt="Research Programs">
+                <div class="module-title-container">
+                    <h3 class="module-title">@Localizer["ResearchPrograms"]</h3>
+                    <i class="bi bi-arrow-right module-arrow"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.querySelectorAll('.module-card').forEach(card => {
+            card.addEventListener('click', function () {
+                // Aquí puedes redirigir a la funcionalidad específica del módulo
+                // Por ahora solo un alerta para demostrar que funciona
+                const moduleName = this.querySelector('.module-title').innerText;
+                alert('Accediendo al módulo: ' + moduleName);
+            });
+        });
+    </script>
+}
