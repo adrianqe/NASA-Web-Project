@@ -132,9 +132,6 @@
   <data name="French" xml:space="preserve">
     <value>Francés</value>
   </data>
-  <data name="SignIn" xml:space="preserve">
-    <value>Iniciar Sesión</value>
-  </data>
   <data name="Privacy" xml:space="preserve">
     <value>Privacidad</value>
   </data>

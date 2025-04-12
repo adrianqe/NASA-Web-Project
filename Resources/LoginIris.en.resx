@@ -117,37 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ProjectManagement" xml:space="preserve">
-    <value>NASA Project Management</value>
+  <data name="Or" xml:space="preserve">
+    <value>or</value>
   </data>
-  <data name="Values" xml:space="preserve">
-    <value>Values</value>
+  <data name="SignIn" xml:space="preserve">
+    <value>Sign In</value>
   </data>
-  <data name="Safety" xml:space="preserve">
-    <value>Safety</value>
+  <data name="ScanYourIris" xml:space="preserve">
+    <value>Scan your Iris</value>
   </data>
-  <data name="Integrity" xml:space="preserve">
-    <value>Integrity</value>
-  </data>
-  <data name="Inclusion" xml:space="preserve">
-    <value>Inclusion</value>
-  </data>
-  <data name="Teamwork" xml:space="preserve">
-    <value>Teamwork</value>
-  </data>
-  <data name="Excellence" xml:space="preserve">
-    <value>Excellence</value>
-  </data>
-  <data name="MissionTitle" xml:space="preserve">
-    <value>Mission</value>
-  </data>
-  <data name="MissionText" xml:space="preserve">
-    <value>NASA explores the unknown in air and space, innovates for the benefit of humanity, and inspires the world through discovery.</value>
-  </data>
-  <data name="VisionTitle" xml:space="preserve">
-    <value>Vision</value>
-  </data>
-  <data name="VisionText" xml:space="preserve">
-    <value>NASA strives to reach new heights and reveal the unknown, extending human presence beyond Earth to benefit all humankind.</value>
+  <data name="SignInWithFingerprint" xml:space="preserve">
+    <value>Sign In with fingerprint</value>
   </data>
 </root>
