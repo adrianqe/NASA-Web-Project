@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="ProjectManagement" xml:space="preserve">
+    <value>Gestion de projets NASA</value>
+  </data>
+	<data name="Values" xml:space="preserve">
+    <value>Valeurs</value>
+  </data>
+	<data name="Safety" xml:space="preserve">
+    <value>Sécurité</value>
+  </data>
+	<data name="Integrity" xml:space="preserve">
+    <value>Intégrité</value>
+  </data>
+	<data name="Inclusion" xml:space="preserve">
+    <value>Inclusion</value>
+  </data>
+	<data name="Teamwork" xml:space="preserve">
+    <value>Travail d'équipe</value>
+  </data>
+	<data name="Excellence" xml:space="preserve">
+    <value>Excellence</value>
+  </data>
+	<data name="MissionTitle" xml:space="preserve">
+    <value>Mission</value>
+  </data>
+	<data name="MissionText" xml:space="preserve">
+    <value>La NASA explore l'inconnu dans l'air et l'espace, innove pour le bénéfice de l'humanité et inspire le monde par la découverte.</value>
+  </data>
+	<data name="VisionTitle" xml:space="preserve">
+    <value>Vision</value>
+  </data>
+	<data name="VisionText" xml:space="preserve">
+    <value>La NASA s'efforce d'atteindre de nouveaux sommets et de révéler l'inconnu, étendant la présence humaine au-delà de la Terre pour le bien de toute l'humanité.</value>
+  </data>
+</root>
