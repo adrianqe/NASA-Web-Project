@@ -117,16 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Or" xml:space="preserve">
-    <value>o</value>
+  <data name="SelectModule" xml:space="preserve">
+    <value />
   </data>
-  <data name="SignIn" xml:space="preserve">
-    <value>Iniciar sesión</value>
+  <data name="HumanResources" xml:space="preserve">
+    <value />
   </data>
-  <data name="ScanYourIris" xml:space="preserve">
-    <value>Escanear Iris</value>
+  <data name="Finance" xml:space="preserve">
+    <value />
   </data>
-  <data name="SignInWithFingerprint" xml:space="preserve">
-    <value>Iniciar con huella</value>
+  <data name="SpaceMissions" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Experiments" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ResearchPrograms" xml:space="preserve">
+    <value />
   </data>
 </root>

@@ -9,6 +9,15 @@
         document.querySelector('.btn-scan').addEventListener('click', function() {
             window.location.href = '@Url.Action("Modules", "Dashboard")';
         });
+
+        function handleLogin() {
+            localStorage.setItem('isLoggedIn', 'true');
+            window.location.href = '@Url.Action("LoginIris", "Account")';
+        }
+
+        document.querySelector('.btn-scan:last-of-type').addEventListener('click', function () {
+            window.location.href = '@Url.Action("Modules", "Dashboard")';
+        });
     </script>
 }
 
@@ -104,7 +113,15 @@
             <div class="mt-4">
                 <img src="~/images/iris.png" alt="Scan Iris" width="50" class="me-2" />
             </div>
-            <button class="btn-scan mt-4">@Localizer["ScanYourIris"]</button>
+
+            <button type="button" class="btn-scan mt-4" onclick="handleLogin()">
+                @Localizer["ScanYourIris"]
+            </button>
+
+
+
+            @* <button class="btn-scan mt-4">@Localizer["ScanYourIris"]</button> *@
+
             <div class="divider">@Localizer["Or"]</div>
             <a href="@Url.Action("LoginFingerprint", "Account")">@Localizer["SignInWithFingerprint"]</a>
         </div>

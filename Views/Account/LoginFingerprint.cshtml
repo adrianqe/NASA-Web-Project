@@ -93,7 +93,9 @@
         <div class="login-box">
             <h2>@Localizer["SignIn"]</h2>
             <div class="mt-4"><img src="~/images/fingerprint.png" alt="Fingerprint" width="50" class="me-2" /> </div>
-            <button id="scanButton" class="btn-scan mt-4">@Localizer["ScanYourFingerprint"]</button>
+            <button type="button" class="btn-scan mt-4" onclick="handleFingerprintLogin()">
+                @Localizer["ScanYourFingerprint"]
+            </button>
             <div class="divider">@Localizer["Or"]</div>
             <a href="@Url.Action("LoginIris", "Account")">@Localizer["SignInWithIris"]</a>
         </div>
@@ -102,8 +104,9 @@
 
 @section Scripts {
     <script>
-        document.getElementById('scanButton').addEventListener('click', function() {
+        function handleFingerprintLogin() {
+            localStorage.setItem('isLoggedIn', 'true');
             window.location.href = '@Url.Action("Modules", "Dashboard")';
-        });
+        }
     </script>
 }
