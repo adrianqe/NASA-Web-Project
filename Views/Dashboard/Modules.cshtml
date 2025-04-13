@@ -89,7 +89,7 @@
         </div>
 
         <div class="col-md-4">
-            <div class="module-card">
+            <div class="module-card" id="space-missions-card">
                 <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/Mfe6a096a555925ec892723fa3c8c6e051742513866796" class="module-image" alt="Space Missions">
                 <div class="module-title-container">
                     <h3 class="module-title">@Localizer["SpaceMissions"]</h3>
@@ -127,9 +127,15 @@
     <script>
         document.querySelectorAll('.module-card').forEach(card => {
             card.addEventListener('click', function () {
-
                 const moduleName = this.querySelector('.module-title').innerText;
-                alert('Accediendo al módulo: ' + moduleName);
+
+                // Verificamos si es la tarjeta de Space Missions
+                if (this.id === "space-missions-card") {
+                    // Redirige a la vista de SpaceMissions
+                    window.location.href = '@Url.Action("SpaceMissions", "SpaceMissions")';
+                } else {
+                    alert('Accediendo al módulo: ' + moduleName);
+                }
             });
         });
     </script>

@@ -1,0 +1,116 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@{
+    ViewData["Title"] = Localizer["SpaceMissionsTitle"];
+}
+
+<style>
+    .mission-card {
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+        height: 270px;
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .mission-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .mission-image {
+        height: 200px;
+        width: 100%;
+        object-fit: contain;
+        object-position: center;
+        display: block;
+    }
+
+    .mission-title-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 15px;
+        background-color: #f8f9fa;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 70px;
+    }
+
+    .mission-title {
+        font-size: 16px;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .btn-manage {
+        font-size: 14px;
+        color: #0033a0;
+        border: 1px solid #0033a0;
+        background-color: transparent;
+        padding: 4px 10px;
+        border-radius: 5px;
+    }
+
+    .btn-manage:hover {
+        background-color: #0033a0;
+        color: white;
+    }
+
+    .justify-center {
+        justify-content: center;
+    }
+
+    .last-row-item {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+</style>
+
+<div class="container mt-5">
+    <h1 class="text-center mb-5">@Localizer["SelectSpaceMission"]</h1>
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="mission-card" onclick="viewMission('Apollo')">
+                <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/M84dfebf3cf9ca177d413ba7a95e4c7841742500396987" class="mission-image" alt="Apollo Mission">
+                <div class="mission-title-container">
+                    <h3 class="mission-title">Project Apolo</h3>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="mission-card" onclick="viewMission('Voyager')">
+                <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/Mefe72fefd0e7eee8b3648c0df5f75cf81742500328940" class="mission-image" alt="Gemini Mission">
+                <div class="mission-title-container">
+                    <h3 class="mission-title">Project Gemini</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="mission-card" onclick="viewMission('ISS')">
+                <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/M09b4817283b8b17ea47e971a1e0e0fc61742500486994" class="mission-image" alt="Mercury Mission">
+                <div class="mission-title-container">
+                    <h3 class="mission-title">Project Mercury</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn-manage" onclick="event.stopPropagation(); alert('This is a prototype')">Manage</button>
+</div>
+
+@section Scripts {
+    <script>
+        function viewMission(missionName) {
+            // Aquí podrías usar window.location para simular navegación
+            window.location.href = `/SpaceMissions/${missionName}`;
+        }
+    </script>
+}
