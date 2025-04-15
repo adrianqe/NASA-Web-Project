@@ -1,0 +1,136 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@{
+    ViewData["Title"] = "Employees";
+}
+
+
+
+
+<style>
+    .list-group-horizontal .list-group-item {
+        flex: 1; /* Que todos ocupen el mismo ancho */
+        display: flex;
+        align-items: center; /* Centra verticalmente */
+        justify-content: center; /* Opcional: centra horizontalmente */
+        height: 60px; /* Altura fija para todos los ítems */
+        padding: 0.5rem; /* Ajuste de padding si hace falta */
+        border: 1px solid #bdbdbd;
+        border-radius: 0 !important;
+    }
+
+        .list-group-horizontal .list-group-item button {
+            height: 36px; /* Ajusta el botón si se ve muy alto */
+        }
+</style>
+                                          
+    <div class="text-center mt-5">
+
+    <h1 class="display-4 fw-bold">@Localizer["HumanResourcesTitle"]</h1>
+        <br>
+        <!-- Fila 1 -->
+        <div class="row justify-content-center mb-6">
+            <!-- col 1 -->
+
+            <div class="col-md-5 text-start">
+            <button class="btn btn-primary">@Localizer["Add"]</button>
+            </div>
+
+
+            <div class="col-md-5">
+                <form class="d-flex text-end" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <a href="@Url.Action("Details", "Employee", new { id = 1 })" target="_blank" title="Ver detalles">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="Edit" width="24" height="24">
+                </a>
+                   @*  <button class="btn btn-outline-success" type="submit">Search</button> *@
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+    <br>
+    <!-- Fila 2 -->
+    <div class="row justify-content-center">
+        <!-- col 1 -->
+        <div class="col-md-10 justify-content-center">
+
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item text-white" style="background-color: #bdbdbd">ID</li>
+            <li class="list-group-item text-white" style="background-color: #bdbdbd">@Localizer["Name"]</li>
+            <li class="list-group-item text-white" style="background-color: #bdbdbd">@Localizer["Phone"]</li>
+            <li class="list-group-item text-white" style="background-color: #bdbdbd">@Localizer["Role"]</li>
+            <li class="list-group-item text-white" style="background-color: #bdbdbd">@Localizer["Status"]</li>
+            <li class="list-group-item text-white" style="background-color: #bdbdbd">@Localizer["Action"]</li>
+            </ul>
+
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item">#001</li>
+                <li class="list-group-item">Adam Smith</li>
+                <li class="list-group-item">+91 98765 43210</li>
+                <li class="list-group-item">Coordinator</li>
+                <li class="list-group-item">Unfrozen</li>
+            <li class="list-group-item">  
+                <a href="@Url.Action("Details", "Employee", new { id = 1 })" target="_blank" title="Ver detalles">  
+                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="Edit" width="24" height="24">
+                </a>
+            </li>
+               
+            </ul>
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item">#002</li>
+                <li class="list-group-item">Edward James</li>
+                <li class="list-group-item">+91 93745 13518</li>
+                <li class="list-group-item">Profesional</li>
+                <li class="list-group-item">Unfrozen</li>
+                <li class="list-group-item">
+                <a href="@Url.Action("Details", "Employee", new { id = 2 })" target="_blank" title="Ver detalles">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="Edit" width="24" height="24">
+                </a>
+            </li>
+            </ul>
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item">#003</li>
+                <li class="list-group-item">Clara David</li>
+                <li class="list-group-item">+91 91264 19253</li>
+                <li class="list-group-item">Coordinator</li>
+                <li class="list-group-item">Frozen</li>
+                <li class="list-group-item">
+                <a href="@Url.Action("Details", "Employee", new { id = 3 })" target="_blank" title="Ver detalles">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="Edit" width="24" height="24">
+                </a>
+                </li>
+                </ul>
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item">#004</li>
+                <li class="list-group-item">Jack Adam</li>
+                <li class="list-group-item">+91 78965 74210</li>
+                <li class="list-group-item">Human Resources</li>
+                <li class="list-group-item">Unfrozen</li>
+                <li class="list-group-item">
+                <a href="@Url.Action("Details", "Employee", new { id = 4 })" target="_blank" title="Ver detalles">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="Edit" width="24" height="24">
+                </a>
+                </li>
+                </ul>
+         
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -69,7 +69,8 @@
     <div class="row g-4">
         <!-- First row - Human Resources, Finance, Space Missions -->
         <div class="col-md-4">
-            <div class="module-card">
+          
+            <div class="module-card" id="human-resources-card">
                 <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/M18d7e580375798fc2200ceafaa9081911742583873695" class="module-image" alt="Human Resources">
                 <div class="module-title-container">
                     <h3 class="module-title">@Localizer["HumanResources"]</h3>
@@ -133,7 +134,9 @@
                 if (this.id === "space-missions-card") {
                     // Redirige a la vista de SpaceMissions
                     window.location.href = '@Url.Action("SpaceMissions", "SpaceMissions")';
-                } else {
+                }
+                else if (this.id === "human-resources-card") window.location.href = '@Url.Action("Employees", "HumanResources")';
+                else {
                     alert('Accediendo al módulo: ' + moduleName);
                 }
             });
