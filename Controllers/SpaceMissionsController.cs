@@ -13,5 +13,21 @@ namespace NASAWebPrototype.Controllers
         {
             return View();
         }
+        public IActionResult ManageSpaceMissions()
+        {
+            return View();
+        }
+        public IActionResult AddProject()
+        {
+            return View();
+        }
+        public IActionResult ProjectSelectedApollo()
+        {
+            return View();
+        }
+        public IActionResult ProjectSelectedGemini()
+        {
+            return View();
+        }
     }
 }

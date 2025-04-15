@@ -117,91 +117,43 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Project Apollo" xml:space="preserve">
-    <value>Proyecto Apolo</value>
+  <data name="Project selected" xml:space="preserve">
+    <value>Project selected</value>
   </data>
-  <data name="That's one small step" xml:space="preserve">
-    <value>Un pequeño paso para un hombre. Un gran salto para la humanidad.</value>
+  <data name="Back" xml:space="preserve">
+    <value>Back</value>
   </data>
-  <data name="Primary goal" xml:space="preserve">
-    <value>Objetivo principal</value>
+  <data name="Project Gemini" xml:space="preserve">
+    <value>Project Gemini</value>
   </data>
-  <data name="Landing humans on the Moon and returning them safely to Earth." xml:space="preserve">
-    <value>Aterrizar humanos en la Luna y devolverlos sanos y salvos a la Tierra.</value>
+  <data name="Lunar" xml:space="preserve">
+    <value>Lunar</value>
   </data>
-  <data name="Status" xml:space="preserve">
-    <value>Estado</value>
+  <data name="Coordinator" xml:space="preserve">
+    <value>Coordinator</value>
   </data>
-  <data name="Finished" xml:space="preserve">
-    <value>Finalizado</value>
+  <data name="Description" xml:space="preserve">
+    <value>Prepare astronauts for lunar exploration.</value>
   </data>
-  <data name="Program duration" xml:space="preserve">
-    <value>Duración del programa</value>
+  <data name="Information" xml:space="preserve">
+    <value>Information</value>
   </data>
-  <data name="Lunar Landing Missions" xml:space="preserve">
-    <value>Misiones de aterrizaje lunar</value>
+  <data name="Initial budget" xml:space="preserve">
+    <value>Initial budget</value>
   </data>
-  <data name="Crewed Missions" xml:space="preserve">
-    <value>Misiones tripuladas</value>
-  </data>
-  <data name="Spacecraft &amp; Technology" xml:space="preserve">
-    <value>Naves espaciales y tecnología</value>
-  </data>
-  <data name="The flight mode" xml:space="preserve">
-    <value>El modo de vuelo, encuentro en órbita lunar, fue seleccionado en 1962. Los propulsores para el programa fueron el Saturno IB para vuelos en órbita terrestre y el Saturno V para vuelos lunares.</value>
-  </data>
-  <data name="Apollo was" xml:space="preserve">
-    <value>Apolo era una nave espacial de tres partes: el módulo de comando (CM), que servía como cuartel general y sección de control de vuelo; el módulo de servicio (SM) para la propulsión y los sistemas de apoyo de la nave (cuando juntos, los dos módulos se llaman CSM); y el módulo lunar (LM), que llevaba a dos miembros de la tripulación a la superficie lunar, los apoyaba en la Luna y los devolvía al CSM en órbita lunar.</value>
-  </data>
-  <data name="View the Apollo Spacecraft Reference book" xml:space="preserve">
-    <value>Ver el libro de referencia de la nave Apollo.</value>
-  </data>
-  <data name="Crew" xml:space="preserve">
-    <value>Tripulación</value>
-  </data>
-  <data name="Research pilot, astronaut" xml:space="preserve">
-    <value>Piloto de investigación, astronauta</value>
-  </data>
-  <data name="Apollo 11 Mission commander" xml:space="preserve">
-    <value>Comandante de la misión Apollo 11.</value>
-  </data>
-  <data name="Time in space" xml:space="preserve">
-    <value>Tiempo en el espacio</value>
-  </data>
-  <data name="8 days and 14 hours" xml:space="preserve">
-    <value>8 días y 14 horas</value>
+  <data name="Budget balance" xml:space="preserve">
+    <value>Budget balance</value>
   </data>
   <data name="Freeze" xml:space="preserve">
-    <value>Congelado</value>
+    <value>Freeze</value>
   </data>
-  <data name="Lunar Module Pilot" xml:space="preserve">
-    <value>Piloto del módulo lunar</value>
-  </data>
-  <data name="Apollo 11 Mission pilot" xml:space="preserve">
-    <value>Piloto de la misión Apollo 11</value>
-  </data>
-  <data name="12 days and 1 hour" xml:space="preserve">
-    <value>12 días y 1 hora</value>
-  </data>
-  <data name="Command module pilot" xml:space="preserve">
-    <value>Piloto del módulo de comando</value>
-  </data>
-  <data name="11 days and 2 hours" xml:space="preserve">
-    <value>11 días y 2 horas</value>
-  </data>
-  <data name="Chronogram" xml:space="preserve">
-    <value>Cronograma</value>
-  </data>
-  <data name="Add resources" xml:space="preserve">
-    <value>Agregar recursos</value>
-  </data>
-  <data name="Example Text" xml:space="preserve">
-    <value>Texto de ejemplo</value>
-  </data>
-  <data name="Upload file" xml:space="preserve">
-    <value>Subir archivo</value>
+  <data name="User list" xml:space="preserve">
+    <value>User list</value>
   </data>
   <data name="Add" xml:space="preserve">
-    <value>Añadir</value>
+    <value>Add</value>
+  </data>
+  <data name="Debits list" xml:space="preserve">
+    <value>Debits list</value>
   </data>
 </root>

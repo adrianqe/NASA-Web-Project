@@ -79,37 +79,40 @@
             <div class="mission-card" onclick="viewMission('Apollo')">
                 <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/M84dfebf3cf9ca177d413ba7a95e4c7841742500396987" class="mission-image" alt="Apollo Mission">
                 <div class="mission-title-container">
-                    <h3 class="mission-title">Project Apolo</h3>
+                    <h3 class="mission-title">@Localizer["Project Apolo"]</h3>
                     
                 </div>
             </div>
         </div>
 
         <div class="col-md-4">
-            <div class="mission-card" onclick="viewMission('Voyager')">
+            <div class="mission-card" onclick="viewMission('Gemini')">
                 <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/Mefe72fefd0e7eee8b3648c0df5f75cf81742500328940" class="mission-image" alt="Gemini Mission">
                 <div class="mission-title-container">
-                    <h3 class="mission-title">Project Gemini</h3>
+                    <h3 class="mission-title">@Localizer["Project Gemini"]</h3>
                 </div>
             </div>
         </div>
 
         <div class="col-md-4">
-            <div class="mission-card" onclick="viewMission('ISS')">
+            <div class="mission-card" onclick="viewMission('Mercury')">
                 <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/M09b4817283b8b17ea47e971a1e0e0fc61742500486994" class="mission-image" alt="Mercury Mission">
                 <div class="mission-title-container">
-                    <h3 class="mission-title">Project Mercury</h3>
+                    <h3 class="mission-title">@Localizer["Project Mercury"]</h3>
                 </div>
             </div>
         </div>
     </div>
-    <button class="btn-manage" onclick="event.stopPropagation(); alert('This is a prototype')">Manage</button>
+
+    <div class="d-flex last-row-item mt-4">
+        <button class="btn-manage" onclick="window.location.href='/SpaceMissions/ManageSpaceMissions'">
+			@Localizer["Manage"]
+		</button>
 </div>
 
 @section Scripts {
     <script>
         function viewMission(missionName) {
-            // Aquí podrías usar window.location para simular navegación
             window.location.href = `/SpaceMissions/${missionName}`;
         }
     </script>
