@@ -1,7 +1,7 @@
 ﻿@using Microsoft.AspNetCore.Mvc.Localization
 @inject IViewLocalizer Localizer
 @{
-    ViewData["Title"] = Localizer["SpaceMissionsTitle"];
+    ViewData["Title"] = Localizer["ResearchProgramsTitle"];
 }
 
 <style>
@@ -86,7 +86,7 @@
         }
 </style>
 <div class="container mt-5">
-    <h1 class="text-center mb-5">@Localizer["SelectSpaceMission"]</h1>
+    <h1 class="text-center mb-5">@Localizer["SelectExperiment"]</h1>
 
     <button class="back-button mb-4" onclick="window.location.href='/Dashboard/Modules'">
         @Localizer["Back"]
@@ -94,30 +94,30 @@
 
     <div class="row g-4">
         <div class="col-md-4">
-            <div class="mission-card" onclick="viewMission('Apollo')">
-                <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/M84dfebf3cf9ca177d413ba7a95e4c7841742500396987" class="mission-image" alt="Apollo Mission">
+            <div class="mission-card" onclick="viewMission('SimulatingLifeOnMars')">
+                <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/M2fa36b3744db891be9ce9cbe595dcefd1742628439939" class="mission-image" alt="Simulating life on Mars">
                 <div class="mission-title-container">
-                    <h3 class="mission-title">@Localizer["Project Apolo"]</h3>
+                    <h3 class="mission-title">@Localizer["Simulating life on Mars"]</h3>
                     <i class="bi bi-arrow-right module-arrow"></i>
                 </div>
             </div>
         </div>
 
         <div class="col-md-4">
-            <div class="mission-card" onclick="viewMission('Gemini')">
-                <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/Mefe72fefd0e7eee8b3648c0df5f75cf81742500328940" class="mission-image" alt="Gemini Mission">
+            <div class="mission-card" onclick="viewMission('Moonwalks')">
+                <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/M897a6a34d05569d726a633431664674a1742626166636" class="mission-image" alt="Moonwalks">
                 <div class="mission-title-container">
-                    <h3 class="mission-title">@Localizer["Project Gemini"]</h3>
+                    <h3 class="mission-title">@Localizer["Moonwalks"]</h3>
                     <i class="bi bi-arrow-right module-arrow"></i>
                 </div>
             </div>
         </div>
 
         <div class="col-md-4">
-            <div class="mission-card" onclick="viewMission('Mercury')">
-                <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/M09b4817283b8b17ea47e971a1e0e0fc61742500486994" class="mission-image" alt="Mercury Mission">
+            <div class="mission-card" onclick="viewMission('RoboticOperations')">
+                <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/M23dde5f4e60cdb0956a93a58ca2ea1b01742627974279" class="mission-image" alt="Robotic Operations">
                 <div class="mission-title-container">
-                    <h3 class="mission-title">@Localizer["Project Mercury"]</h3>
+                    <h3 class="mission-title">@Localizer["Robotic Operations"]</h3>
                     <i class="bi bi-arrow-right module-arrow"></i>
                 </div>
             </div>
@@ -125,15 +125,15 @@
     </div>
 
     <div class="d-flex last-row-item mt-4">
-        <button class="btn-manage" onclick="window.location.href='/SpaceMissions/ManageSpaceMissions'">
-			@Localizer["Manage"]
-		</button>
-</div>
+        <button class="btn-manage" onclick="window.location.href='/Experiments/ManageExperiments'">
+            @Localizer["Manage"]
+        </button>
+    </div>
 
-@section Scripts {
-    <script>
-        function viewMission(missionName) {
-            window.location.href = `/SpaceMissions/${missionName}`;
-        }
-    </script>
-}
+    @section Scripts {
+        <script>
+            function viewMission(missionName) {
+                window.location.href = `/Experiments/${missionName}`;
+            }
+        </script>
+    }

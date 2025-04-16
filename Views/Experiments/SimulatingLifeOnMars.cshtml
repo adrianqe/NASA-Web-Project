@@ -1,0 +1,156 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@{
+    ViewData["Title"] = Localizer["SimulatingLifeOnMars"];
+}
+
+<style>
+    .module-card {
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+        height: 250px;
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+        .module-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+    .module-image {
+        height: 200px; /* Increased height to fill the card better */
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block; /* Removes any inherent spacing */
+    }
+
+    .module-title-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 15px;
+        background-color: #f8f9fa;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 50px; /* Fixed height for title container */
+        margin: 0; /* Remove any margin */
+    }
+
+    .module-title {
+        font-size: 16px;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .module-arrow {
+        color: #0033a0;
+    }
+
+    /* For the centered last row */
+    .justify-center {
+        justify-content: center;
+    }
+
+    .last-row-item {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .image-nasa{
+        height: 200px; /* Increased height to fill the card better */
+        width: 100%;
+        object-fit: contain;
+        object-position: center;
+        display: block; /* Removes any inherent spacing */
+    }
+
+    .image-module{
+        height: 200px; /* Increased height to fill the card better */
+        width: 100%;
+        object-fit:contain;
+        object-position: center;
+        display: block; /* Removes any inherent spacing */
+    }
+
+    .back-button {
+        border: 1px solid #e60000;
+        color: #e60000;
+        background-color: transparent;
+        padding: 5px 15px;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+
+        .back-button:hover {
+            background-color: #e60000;
+            color: white;
+        }
+</style>
+
+<div class="container mt-5">
+    <h1 class="text-center mb-5">@Localizer["Simulating life on Mars"]</h1>
+    <button class="back-button mb-4" onclick="window.location.href='/Experiments/Experiment'">
+        @Localizer["Back"]
+    </button>
+    <div class="row g-4 justify-center">
+        <!-- First row - Experiment Information, Investigators in Charge-->
+        <div class="col-md-4 last-row-item">
+
+            <div class="module-card" onclick="viewMission('ExperimentInformation')">
+                <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/M5b07cd596d8d0ec94e0e8dca15776d061743121686232" class="module-image" alt="NASA Information">
+                <div class="module-title-container">
+                    <h3 class="module-title">@Localizer["Experiment Information"]</h3>
+                    <i class="bi bi-arrow-right module-arrow"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 last-row-item">
+            <div class="module-card" onclick="viewMission('InvestigatorsInCharge')">
+                <img class="image-nasa" src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/Ma96898ad5ddfb7edc5ce8407f7ab42511743121757481" class="module-image" alt="Helmet">
+                <div class="module-title-container">
+                    <h3 class="module-title">@Localizer["Investigators in Charge"]</h3>
+                    <i class="bi bi-arrow-right module-arrow"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second row - Resources used, Results and publication -->
+    <div class="row g-4 justify-center">
+        <div class="col-md-4 last-row-item">
+            <div class="module-card" onclick="viewMission('ResourcesUsed')">
+                <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/M54a5e56c09cf3fb44507c5b2fdb63a791743121829679" class="module-image" alt="Resources used">
+                <div class="module-title-container">
+                    <h3 class="module-title">@Localizer["Resources used"]</h3>
+                    <i class="bi bi-arrow-right module-arrow"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 last-row-item">
+            <div class="module-card" onclick="viewMission('ResultsAndPublications')">
+                <img class="image-nasa" src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/M3d587de8843be3b73ae7eec60821b84c1743121890132" class="module-image" alt="Results and publication">
+                <div class="module-title-container">
+                    <h3 class="module-title">@Localizer["Results and publications"]</h3>
+                    <i class="bi bi-arrow-right module-arrow"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function viewMission(missionName) {
+            window.location.href = `/Experiments/${missionName}`;
+        }
+    </script>
+}

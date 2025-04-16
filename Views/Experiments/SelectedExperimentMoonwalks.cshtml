@@ -1,0 +1,687 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@{
+    ViewData["Title"] = Localizer["ProjectSelected"];
+}
+<style>
+    /* Estilos comunes */
+    .back-button {
+        border: 1px solid #e60000;
+        color: #e60000;
+        background-color: transparent;
+        padding: 5px 15px;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+
+        .back-button:hover {
+            background-color: #e60000;
+            color: white;
+        }
+
+    .add-button {
+        background-color: #0033a0;
+        color: white;
+        border: none;
+        padding: 5px 15px;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+
+        .add-button:hover {
+            background-color: #00257a;
+        }
+
+    .search-container {
+        position: relative;
+        width: 100%;
+    }
+
+    .search-input {
+        width: 100%;
+        padding: 8px 15px;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        padding-left: 35px;
+    }
+
+    .search-icon {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #6c757d;
+    }
+
+    .project-list {
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 15px;
+        margin-top: 20px;
+    }
+
+    .project-item {
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 15px;
+        margin-bottom: 15px;
+        background-color: #fff;
+    }
+
+    .project-logo {
+        max-width: 150px;
+        max-height: 150px;
+        object-fit: contain;
+    }
+
+    .description-box {
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        padding: 10px;
+        height: 80px;
+        overflow: auto;
+    }
+
+    .user-box {
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+
+    .budget-input {
+        width: 100%;
+        padding: 6px 12px;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+    }
+
+    .select-button {
+        background-color: #0033a0;
+        color: white;
+        border: none;
+        padding: 5px 15px;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+
+        .select-button:hover {
+            background-color: #00257a;
+        }
+
+    .icon-box {
+        width: 30px;
+        text-align: center;
+        margin-right: 5px;
+    }
+
+    .freeze-button {
+        background-color: #e60000;
+        color: white;
+        border: none;
+        padding: 5px 15px;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+
+        .freeze-button:hover {
+            background-color: #c00000;
+        }
+
+    .user-list-container, .debit-list-container {
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 15px;
+        margin-top: 15px;
+    }
+
+    .list-title {
+        font-weight: bold;
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid #dee2e6;
+        margin-bottom: 15px;
+    }
+
+    .list-item {
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        display: flex;
+    }
+
+    .list-cell {
+        padding: 10px;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: 1px solid #dee2e6;
+    }
+
+        .list-cell:last-child {
+            border-right: none;
+        }
+
+    .filters-icon {
+        cursor: pointer;
+        margin-left: 10px;
+    }
+
+    .info-label {
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+    .info-body {
+        padding: 15px;
+    }
+
+    .list-container {
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-top: 20px;
+    }
+
+    .list-header {
+        text-align: center;
+        font-weight: bold;
+        padding: 10px;
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    .list-body {
+        padding: 15px;
+    }
+
+    .add-user-button {
+        background-color: #0033a0;
+        color: white;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        width: 120px;
+    }
+
+        .add-user-button:hover {
+            background-color: #00257a;
+        }
+
+    .list-row {
+        display: flex;
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        overflow: hidden;
+    }
+    .list-row2{
+        display: flex;
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        margin-bottom: 0px;
+        overflow: hidden;
+    }
+
+    .list-cell {
+        flex: 1;
+        padding: 8px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: 1px solid #dee2e6;
+    }
+
+    .list-cell {
+        flex: 1;
+        padding: 8px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: 1px solid #dee2e6;
+    }
+
+        .list-cell:last-child {
+            border-right: none;
+        }
+
+    .image-placeholder {
+        width: 150px;
+        height: 150px;
+        background-color: #f8f9fa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #6c757d;
+        border: 1px dashed #ced4da;
+        border-radius: 5px;
+    }
+
+    .project-info-item{
+        padding: 8px;
+    }
+
+    .project-title {
+        font-weight: bold;
+        font-size: 16px;
+        margin-top: 10px;
+
+    }
+</style>
+<div class="container mt-4">
+    <h1 class="text-center mb-4">@Localizer["Project selected"]</h1>
+
+    <button class="back-button mb-4" onclick="window.location.href='/Experiments/ManageExperiments'">
+        @Localizer["Back"]
+    </button>
+
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3 d-flex align-items-center justify-content-center flex-column">
+                            <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/M897a6a34d05569d726a633431664674a1742626166636" class="project-logo" alt="Project Apollo">
+                            <span class="project-title">@Localizer["SimulatingLifeOnMars"]</span>
+                        </div>
+
+                        <div class="col-md-9">
+                            <div class="mb-2 d-flex">
+                                <div class="project-info-item "><img src="~/images/calendar.png" alt="Calendar" width="15" /> 12/07/1972</div>
+                                <div class="project-info-item"><img src="~/images/label.png" alt="Type" width="15" />@Localizer["Lunar"]</div>
+                                <div class="project-info-item"><i class="fas bi-person-circle"></i>@Localizer["Coordinator"]</div>
+                            </div>
+                            <div class="description-box mb-3" style="height: 120px;">
+                                @Localizer["Description"]
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-header text-center">
+                    @Localizer["Information"]
+                </div>
+                <div class="info-body">
+                    <div class="mb-3">
+                        <div class="info-label">@Localizer["Initial budget"]</div>
+                        <div class="input-group">
+                            <span class="input-group-text">$</span>
+                            <input type="text" class="form-control" placeholder="28,000.00">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="info-label">@Localizer["Budget balance"]</div>
+                        <div class="input-group">
+                            <span class="input-group-text">$</span>
+                            <input type="text" class="form-control" placeholder="24,000.00">
+                        </div>
+                    </div>
+                    <button id="freezeButton" class="freeze-button w-100" onclick="toggleFreeze()">
+                        @Localizer["Freeze"]
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-1">
+        <!-- User List Section -->
+        <div class="col-md-4">
+            <div class="list-container">
+                <div class="list-header">
+                    @Localizer["User list"]
+                </div>
+                <div class="list-body">
+                    <!-- User Item 1 -->
+                    <div class="list-row2">
+                        <div class="list-cell">
+                            <i class="fas bi-person-circle"></i>
+                        </div>
+                        <div class="list-cell">
+                            $
+                        </div>
+                    </div>
+                    <!-- User Item 1 second row -->
+                    <div class="list-row">
+                        <div class="list-cell">
+                            E. Mcanny
+                        </div>
+                        <div class="list-cell">
+                            20,000
+                        </div>
+                    </div>
+
+                    <!-- User Item 2 -->
+                    <div class="list-row2">
+                        <div class="list-cell">
+                            <i class="fas bi-person-circle"></i>
+                        </div>
+                        <div class="list-cell">
+                            $
+                        </div>
+                    </div>
+                    <!-- User Item 2 second row -->
+                    <div class="list-row">
+                        <div class="list-cell">
+                            C. Chiry
+                        </div>
+                        <div class="list-cell">
+                            25,000
+                        </div>
+                    </div>
+
+                    <!-- User Item 3 -->
+                    <div class="list-row2">
+                        <div class="list-cell">
+                            <i class="fas bi-person-circle"></i>
+                        </div>
+                        <div class="list-cell">
+                            $
+                        </div>
+                    </div>
+                    <!-- User Item 3 second row -->
+                    <div class="list-row">
+                        <div class="list-cell">
+                            G. Weiss
+                        </div>
+                        <div class="list-cell">
+                            24,000
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-center mt-3">
+                        <button class="add-user-button">
+                            @Localizer["Add"]
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Debits List Section -->
+        <div class="col-md-8">
+            <div class="list-container">
+                <div class="list-header">
+                    @Localizer["Debits list"]
+                </div>
+                <div class="list-body">
+                    <div class="row">
+                        <!-- Debit Item row 1 first column -->
+                        <div class="col-md-6">
+                            <div class="list-row2">
+                                <div class="list-cell">
+                                    <div class="date-icon">
+                                        <img src="~/images/calendar.png" alt="Calendar" width="20" />
+                                    </div>
+                                </div>
+                                <div class="list-cell">
+                                    $
+                                </div>
+                                <div class="list-cell">
+                                    <i class="fas bi-person-circle"></i>
+                                </div>
+                            </div>
+                            <div class="list-row">
+                                <div class="list-cell">
+                                    <div class="date-icon">
+                                        17/04/1971
+                                    </div>
+                                </div>
+                                <div class="list-cell">
+                                    30,000
+                                </div>
+                                <div class="list-cell">
+                                    J. Smith
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Debit Item row 1 second column -->
+                        <div class="col-md-6">
+                            <div class="list-row2">
+                                <div class="list-cell">
+                                    <div class="date-icon">
+                                        <img src="~/images/calendar.png" alt="Calendar" width="20" />
+                                    </div>
+                                </div>
+                                <div class="list-cell">
+                                    $
+                                </div>
+                                <div class="list-cell">
+                                    <i class="fas bi-person-circle"></i>
+                                </div>
+                            </div>
+                            <div class="list-row">
+                                <div class="list-cell">
+                                    <div class="date-icon">
+                                        17/04/1971
+                                    </div>
+                                </div>
+                                <div class="list-cell">
+                                    37,000
+                                </div>
+                                <div class="list-cell">
+                                    J. Doe
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <!-- Debit Item row 2 first column -->
+                        <div class="col-md-6">
+                            <div class="list-row2">
+                                <div class="list-cell">
+                                    <div class="date-icon">
+                                        <img src="~/images/calendar.png" alt="Calendar" width="20" />
+                                    </div>
+                                </div>
+                                <div class="list-cell">
+                                    $
+                                </div>
+                                <div class="list-cell">
+                                    <i class="fas bi-person-circle"></i>
+                                </div>
+                            </div>
+                            <div class="list-row">
+                                <div class="list-cell">
+                                    <div class="date-icon">
+                                        17/04/1971
+                                    </div>
+                                </div>
+                                <div class="list-cell">
+                                    30,000
+                                </div>
+                                <div class="list-cell">
+                                    J. Smith
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Debit Item row 2 first column -->
+                        <div class="col-md-6">
+                            <div class="list-row2">
+                                <div class="list-cell">
+                                    <div class="date-icon">
+                                        <img src="~/images/calendar.png" alt="Calendar" width="20" />
+                                    </div>
+                                </div>
+                                <div class="list-cell">
+                                    $
+                                </div>
+                                <div class="list-cell">
+                                    <i class="fas bi-person-circle"></i>
+                                </div>
+                            </div>
+                            <div class="list-row">
+                                <div class="list-cell">
+                                    <div class="date-icon">
+                                        17/04/1971
+                                    </div>
+                                </div>
+                                <div class="list-cell">
+                                    37,000
+                                </div>
+                                <div class="list-cell">
+                                    J. Doe
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <!-- Debit Item row 3 first column -->
+                        <div class="col-md-6">
+                            <div class="list-row2">
+                                <div class="list-cell">
+                                    <div class="date-icon">
+                                        <img src="~/images/calendar.png" alt="Calendar" width="20" />
+                                    </div>
+                                </div>
+                                <div class="list-cell">
+                                    $
+                                </div>
+                                <div class="list-cell">
+                                    <i class="fas bi-person-circle"></i>
+                                </div>
+                            </div>
+                            <div class="list-row">
+                                <div class="list-cell">
+                                    <div class="date-icon">
+                                        17/04/1971
+                                    </div>
+                                </div>
+                                <div class="list-cell">
+                                    30,000
+                                </div>
+                                <div class="list-cell">
+                                    J. Smith
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Debit Item row 3 first column -->
+                        <div class="col-md-6">
+                            <div class="list-row2">
+                                <div class="list-cell">
+                                    <div class="date-icon">
+                                        <img src="~/images/calendar.png" alt="Calendar" width="20" />
+                                    </div>
+                                </div>
+                                <div class="list-cell">
+                                    $
+                                </div>
+                                <div class="list-cell">
+                                    <i class="fas bi-person-circle"></i>
+                                </div>
+                            </div>
+                            <div class="list-row">
+                                <div class="list-cell">
+                                    <div class="date-icon">
+                                        17/04/1971
+                                    </div>
+                                </div>
+                                <div class="list-cell">
+                                    37,000
+                                </div>
+                                <div class="list-cell">
+                                    J. Doe
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <!-- Debit Item row 4 first column -->
+                        <div class="col-md-6">
+                            <div class="list-row2">
+                                <div class="list-cell">
+                                    <div class="date-icon">
+                                        <img src="~/images/calendar.png" alt="Calendar" width="20" />
+                                    </div>
+                                </div>
+                                <div class="list-cell">
+                                    $
+                                </div>
+                                <div class="list-cell">
+                                    <i class="fas bi-person-circle"></i>
+                                </div>
+                            </div>
+                            <div class="list-row">
+                                <div class="list-cell">
+                                    <div class="date-icon">
+                                        17/04/1971
+                                    </div>
+                                </div>
+                                <div class="list-cell">
+                                    30,000
+                                </div>
+                                <div class="list-cell">
+                                    J. Smith
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Debit Item row 4 first column -->
+                        <div class="col-md-6">
+                            <div class="list-row2">
+                                <div class="list-cell">
+                                    <div class="date-icon">
+                                        <img src="~/images/calendar.png" alt="Calendar" width="20" />
+                                    </div>
+                                </div>
+                                <div class="list-cell">
+                                    $
+                                </div>
+                                <div class="list-cell">
+                                    <i class="fas bi-person-circle"></i>
+                                </div>
+                            </div>
+                            <div class="list-row">
+                                <div class="list-cell">
+                                    <div class="date-icon">
+                                        17/04/1971
+                                    </div>
+                                </div>
+                                <div class="list-cell">
+                                    37,000
+                                </div>
+                                <div class="list-cell">
+                                    J. Doe
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function toggleFreeze() {
+            const button = document.getElementById('freezeButton');
+            if (button.innerText === '@Localizer["Freeze"]') {
+                button.innerText = '@Localizer["Unfreeze"]';
+                button.style.backgroundColor = '#0033a0';
+            } else {
+                button.innerText = '@Localizer["Freeze"]';
+                button.style.backgroundColor = '#e60000';
+            }
+        }
+    </script>
+}

@@ -1,0 +1,378 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@{
+    ViewData["Title"] = Localizer["ManageProjects"];
+}
+<style>
+    /* Estilos comunes */
+    .back-button {
+        border: 1px solid #e60000;
+        color: #e60000;
+        background-color: transparent;
+        padding: 5px 15px;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+
+        .back-button:hover {
+            background-color: #e60000;
+            color: white;
+        }
+
+    .add-button {
+        background-color: #0033a0;
+        color: white;
+        border: none;
+        padding: 5px 15px;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+
+        .add-button:hover {
+            background-color: #00257a;
+        }
+
+    .search-container {
+        position: relative;
+        width: 100%;
+    }
+
+    .search-input {
+        width: 100%;
+        padding: 8px 15px;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        padding-left: 35px;
+    }
+
+    .search-icon {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #6c757d;
+    }
+
+    .project-list {
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 15px;
+        margin-top: 20px;
+    }
+
+    .project-item {
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 15px;
+        margin-bottom: 15px;
+        background-color: #fff;
+    }
+
+    .project-logo {
+        max-width: 150px;
+        max-height: 150px;
+        object-fit: contain;
+    }
+
+    .logo-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .project-title {
+        font-weight: bold;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .description-box {
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        padding: 10px;
+        height: 100px;
+        overflow: auto;
+    }
+
+    .users-table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+        .users-table tr {
+            border-bottom: 1px solid #dee2e6;
+        }
+
+            .users-table tr:last-child {
+                border-bottom: none;
+            }
+
+        .users-table td {
+            padding: 8px;
+            text-align: center;
+            border-right: 1px solid #dee2e6;
+        }
+
+            .users-table td:last-child {
+                border-right: none;
+            }
+
+    .budget-input {
+        width: 100%;
+        padding: 6px 12px;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+    }
+
+    .select-button {
+        background-color: #0033a0;
+        color: white;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        width: 100%;
+    }
+
+        .select-button:hover {
+            background-color: #00257a;
+        }
+
+    .filters-icon {
+        cursor: pointer;
+        margin-left: 10px;
+    }
+
+    .project-info {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .project-info-item {
+        display: flex;
+        align-items: center;
+    }
+
+        .project-info-item i {
+            margin-right: 5px;
+        }
+
+    .users-section h6, .budget-section h6 {
+        margin-bottom: 10px;
+    }
+
+    .main-header {
+        background-color: #000;
+        color: white;
+        padding: 10px 0;
+    }
+
+    .nasa-logo {
+        height: 70px;
+    }
+
+    .header-right {
+        display: flex;
+        align-items: center;
+    }
+
+    .language-selector {
+        margin-right: 15px;
+    }
+
+    .user-section {
+        margin-right: 10px;
+    }
+
+    .budget-section input {
+        height: 38px;
+    }
+
+    .content-row {
+        display: flex;
+        align-items: stretch;
+        margin-top: 10px;
+    }
+
+    .content-section {
+        padding: 0 10px;
+    }
+
+    .project-info-item {
+        padding: 8px;
+    }
+
+    .image-item{
+
+    }
+</style>
+
+<div class="container mt-4">
+    <h1 class="text-center mb-4">@Localizer["Manage projects"]</h1>
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <button class="back-button" onclick="window.location.href='/ResearchPrograms/ResearchProgram'">
+            @Localizer["Back"]
+        </button>
+
+        <div class="d-flex align-items-center" style="width: 50%;">
+            <div class="search-container me-2">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" placeholder="@Localizer["Search Project"]">
+            </div>
+            <div class="filters-icon">
+                <i class="fas fa-sliders-h fa-lg"></i>
+            </div>
+        </div>
+
+        <button class="add-button" onclick="window.location.href='/ResearchPrograms/AddResearchPrograms'">
+            @Localizer["Add"]
+        </button>
+    </div>
+
+    <h2 class="mb-3 text-center">@Localizer["Last projects"]</h2>
+
+    <div class="project-list">
+        <!-- SpaceX -->
+        <div class="project-item">
+            <div class="row">
+                <div class="col-md-3 align-content-center">
+                    <div class="logo-container">
+                        <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/M131a8b3a609e04c72d0090d3f8ed71501743050282393" class="project-logo" alt="Project Apollo">
+                        <span class="project-title">@Localizer["SpaceX"]</span>
+                    </div>
+                </div>
+
+                <div class="col-md-9">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="project-info">
+                                <div class="project-info-item"><img class="image-item" src="~/images/calendar.png" alt="Calendar" width="15" /> 12/07/1972</div>
+                                <div class="project-info-item"><img src="~/images/label.png" alt="Type" width="15" />@Localizer["Lunar"]</div>
+                                <div class="project-info-item"><i class="fas bi-person-circle"></i>@Localizer["Coordinator"]</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-row">
+                        <div class="col-md-4 content-section">
+                            <h6>@Localizer["Description"]</h6>
+                            <div class="description-box">@Localizer["Description1"]</div>
+                        </div>
+
+                        <div class="col-md-4 content-section">
+                            <div class="users-section">
+                                <h6>@Localizer["Human Resources"]</h6>
+                                <table class="users-table">
+                                    <tr>
+                                        <td><img src="~/images/calendar.png" alt="Calendar" width="15" /></td>
+                                        <td>$</td>
+                                        <td><i class="fas bi-person-circle"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>##/##/####</td>
+                                        <td>$50,000</td>
+                                        <td>J. Doe</td>
+                                    </tr>
+                                    <tr>
+                                        <td>##/##/####</td>
+                                        <td>$45,000</td>
+                                        <td>A. Smith</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 content-section">
+                            <div class="budget-section">
+                                <h6>@Localizer["Budget balance"]</h6>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text">$</span>
+                                    <input type="text" class="form-control" value="24,000,000" readonly>
+                                </div>
+                                <button class="select-button" onclick="window.location.href='/ResearchPrograms/SelectedProgramSpaceX'">
+                                    @Localizer["Select"]
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Northrop Grumman -->
+        <div class="project-item">
+            <div class="row">
+                <div class="col-md-3 align-content-center">
+                    <div class="logo-container">
+                        <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/Md4f6291b46c138e2fbd3f3b8f16440c21743050339030" class="project-logo" alt="Project Gemini">
+                        <span class="project-title">@Localizer["Northrop"]</span>
+                    </div>
+                </div>
+
+                <div class="col-md-9">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="project-info">
+                                <div class="project-info-item"><img src="~/images/calendar.png" alt="Calendar" width="15" /> 04/12/1961</div>
+                                <div class="project-info-item"><img src="~/images/label.png" alt="Type" width="15" />@Localizer["Lunar"]</div>
+                                <div class="project-info-item"><i class="fas bi-person-circle"></i>@Localizer["Coordinator"]</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-row">
+                        <div class="col-md-4 content-section">
+                            <h6>@Localizer["Description"]</h6>
+                            <div class="description-box">@Localizer["Description2"]</div>
+                        </div>
+
+                        <div class="col-md-4 content-section">
+                            <div class="users-section">
+                                <h6>@Localizer["Human Resources"]</h6>
+                                <table class="users-table">
+                                    <tr>
+                                        <td><img src="~/images/calendar.png" alt="Calendar" width="15" /></td>
+                                        <td>$</td>
+                                        <td><i class="fas bi-person-circle"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>##/##/####</td>
+                                        <td>$48,000</td>
+                                        <td>B. Johnson</td>
+                                    </tr>
+                                    <tr>
+                                        <td>##/##/####</td>
+                                        <td>$42,000</td>
+                                        <td>C. Williams</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 content-section">
+                            <div class="budget-section">
+                                <h6>@Localizer["Budget balance"]</h6>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text">$</span>
+                                    <input type="text" class="form-control" value="18,000,000" readonly>
+                                </div>
+                                <button class="select-button" onclick="window.location.href='/ResearchPrograms/SelectedProgramNorthrop'">
+                                    @Localizer["Select"]
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
