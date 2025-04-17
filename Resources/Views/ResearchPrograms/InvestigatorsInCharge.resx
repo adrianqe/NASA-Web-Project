@@ -117,25 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Investigators in charge" xml:space="preserve">
-    <value>Investigateurs en charge</value>
-  </data>
   <data name="Back" xml:space="preserve">
-    <value>Arrière</value>
+    <value />
   </data>
   <data name="Name:" xml:space="preserve">
-    <value>Nom:</value>
+    <value />
   </data>
-  <data name="Afiliation:" xml:space="preserve">
-    <value>Affiliation:</value>
+  <data name="Investigators in charge" xml:space="preserve">
+    <value />
   </data>
   <data name="Specialization:" xml:space="preserve">
-    <value>Spécialisation:</value>
+    <value />
   </data>
-  <data name="Space habitat engineering" xml:space="preserve">
-    <value>ngénierie des habitats spatiaux</value>
+  <data name="Aerospace Engineering" xml:space="preserve">
+    <value />
   </data>
-  <data name="Agriculture in extreme environments" xml:space="preserve">
-    <value>Agriculture dans des environnements extrêmes</value>
+  <data name="Space Operations" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NASA Johnson Space Center" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NASA Kennedy Space Center" xml:space="preserve">
+    <value />
   </data>
 </root>

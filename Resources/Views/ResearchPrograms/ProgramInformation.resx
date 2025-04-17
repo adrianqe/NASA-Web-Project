@@ -117,25 +117,88 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Investigators in charge" xml:space="preserve">
-    <value>Investigateurs en charge</value>
+  <data name="Program Information" xml:space="preserve">
+    <value />
   </data>
   <data name="Back" xml:space="preserve">
-    <value>Arrière</value>
+    <value />
   </data>
-  <data name="Name:" xml:space="preserve">
-    <value>Nom:</value>
+  <data name="NASA and SpaceX: Commercial Crew Program" xml:space="preserve">
+    <value />
   </data>
-  <data name="Afiliation:" xml:space="preserve">
-    <value>Affiliation:</value>
+  <data name="Objectives" xml:space="preserve">
+    <value />
   </data>
-  <data name="Specialization:" xml:space="preserve">
-    <value>Spécialisation:</value>
+  <data name="Safe astronaut transportation:" xml:space="preserve">
+    <value />
   </data>
-  <data name="Space habitat engineering" xml:space="preserve">
-    <value>ngénierie des habitats spatiaux</value>
+  <data name="The main goal is to ensure available vehicles for transporting astronauts to the ISS and other space destinations." xml:space="preserve">
+    <value />
   </data>
-  <data name="Agriculture in extreme environments" xml:space="preserve">
-    <value>Agriculture dans des environnements extrêmes</value>
+  <data name="Encouraging commercial innovation:" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NASA's goal is for private companies to take a key role in developing and operating these spacecraft, fostering competition and innovation in the space industry." xml:space="preserve">
+    <value />
+  </data>
+  <data name="Cost reduction:" xml:space="preserve">
+    <value />
+  </data>
+  <data name="By involving commercial companies like SpaceX, NASA seeks to reduce the costs associated with space flights, promoting technology reuse such as rockets and spacecraft." xml:space="preserve">
+    <value />
+  </data>
+  <data name="Development of reusable spacecraft:" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SpaceX, as part of this program, designed reusable spacecraft like Crew Dragon that help lower costs and improve efficiency." xml:space="preserve">
+    <value />
+  </data>
+  <data name="Collaborations" xml:space="preserve">
+    <value />
+  </data>
+  <data name="The Commercial Crew Program by NASA, in collaboration with SpaceX, aims to provide safe and cost-effective transportation for astronauts to the International Space Station (ISS) using commercial spacecraft." xml:space="preserve">
+    <value />
+  </data>
+  <data name="Crew Dragon is capable of being fully autonomous, although astronauts can manually control it in case of an emergency. This represents a significant advancement in the safety and reliability of crewed spaceflights." xml:space="preserve">
+    <value />
+  </data>
+  <data name="The Demo-2 mission in May 2020 marked the first crewed flight with Crew Dragon. Astronauts Robert Behnken and Douglas Hurley were transported to the ISS. This flight was a major milestone as it was the first time a private company transported astronauts to the ISS, rather than NASA or the Russian space agency Roscosmos." xml:space="preserve">
+    <value />
+  </data>
+  <data name="The collaboration is not limited to crewed missions. SpaceX also provides cargo transport to the ISS using its Cargo Dragon capsule. NASA and SpaceX have worked closely on these resupply missions, which are conducted regularly." xml:space="preserve">
+    <value />
+  </data>
+  <data name="Cost and Efficiency" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Cost and Efficiency One of the main goals of the collaboration is to reduce the cost of space transportation. SpaceX uses its Falcon 9 rocket to launch both Crew Dragon and Cargo Dragon. The use of reusable rockets, like the Falcon 9, has been a key innovation that significantly reduces the cost of space missions." xml:space="preserve">
+    <value />
+  </data>
+  <data name="Regular Crew Missions" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Following the success of the demonstration flights and the first crewed missions, SpaceX began conducting regular flights under the Commercial Crew Program. These Crew Dragon flights allow NASA to maintain consistent access to the ISS, especially after the retirement of NASA's Space Shuttle program in 2011." xml:space="preserve">
+    <value />
+  </data>
+  <data name="Future Missions Beyond the ISS" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NASA and SpaceX are also collaborating for future exploration missions beyond low Earth orbit, such as trips to the Moon under the Artemis Program and potential missions to Mars. SpaceX is developing the Starship spacecraft as part of this collaboration for more ambitious, long-duration missions." xml:space="preserve">
+    <value />
+  </data>
+  <data name="Impact of the Collaboration" xml:space="preserve">
+    <value />
+  </data>
+  <data name="One of the most significant impacts of the collaboration is the advancement of reusable spacecraft technology. SpaceX's Falcon 9 rocket and Crew Dragon spacecraft are designed to be reused multiple times, reducing the cost of space missions. This reusability could eventually make space travel more affordable and frequent, opening up new possibilities for both crewed and uncrewed missions." xml:space="preserve">
+    <value />
+  </data>
+  <data name="The Crew Dragon features highly advanced autonomous systems, including automatic docking with the ISS, which has set new standards in spacecraft autonomy. This technology helps improve the safety of astronauts and reduces the complexity of space missions." xml:space="preserve">
+    <value />
+  </data>
+  <data name="SpaceX’s leadership in space transportation has positioned the U.S. as a key player in space exploration again, reducing reliance on other countries (like Russia for crew transportation) and establishing partnerships with space agencies worldwide, such as ESA (European Space Agency) and JAXA (Japan)." xml:space="preserve">
+    <value />
+  </data>
+  <data name="Cost and Efficiency  One of the main goals of the collaboration is to reduce the cost of space transportation. SpaceX uses its Falcon 9 rocket to launch both Crew Dragon and Cargo Dragon. The use of reusable rockets, like the Falcon 9, has been a key innovation that significantly reduces the cost of space missions." xml:space="preserve">
+    <value />
   </data>
 </root>

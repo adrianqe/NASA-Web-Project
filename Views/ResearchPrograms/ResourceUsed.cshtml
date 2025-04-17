@@ -1,0 +1,101 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+@{
+    ViewData["Title"] = Localizer["ResourcesUsed"];
+}
+
+<style>
+    .resource-container {
+        max-width: 1000px;
+        margin: 20px auto;
+    }
+
+    .resource-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+
+    .resource-block {
+        width: 48%;
+    }
+
+    .resource-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .resource-description {
+        font-size: 16px;
+        line-height: 1.6;
+        text-align: justify;
+    }
+
+    .page-title {
+        text-align: center;
+        margin: 30px 0;
+        font-size: 36px;
+        font-weight: bold;
+    }
+
+    .back-button {
+        border: 1px solid #e60000;
+        color: #e60000;
+        background-color: transparent;
+        padding: 5px 15px;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+
+    .back-button:hover {
+        background-color: #e60000;
+        color: white;
+    }
+</style>
+
+<div class="container">
+    <h1 class="page-title">@Localizer["Resources Used"]</h1>
+
+    <button class="back-button" onclick="window.location.href='/ResearchPrograms/SpaceX'">
+        @Localizer["Back"]
+    </button>
+
+    <div class="resource-container">
+        <div class="resource-row">
+            <div class="resource-block">
+                <h2 class="resource-title">@Localizer["Raptor Engines"]</h2>
+                <p class="resource-description">
+                    @Localizer["The Raptor engines are used in the Starship vehicle and are being developed for the next generation of space propulsion systems."]
+                </p>
+            </div>
+
+            <div class="resource-block">
+                <h2 class="resource-title">@Localizer["Falcon 9"]</h2>
+                <p class="resource-description">
+                    @Localizer["Primary Resource: The Falcon 9 is a reusable rocket developed by SpaceX, used to launch the Crew Dragon spacecraft and other payloads into orbit. The Falcon 9 is known for its reusability; its first stage can land back on Earth and be reused for subsequent missions, drastically reducing launch costs."]
+                </p>
+            </div>
+        </div>
+
+        <div class="resource-row">
+            <div class="resource-block">
+                <h2 class="resource-title">@Localizer["Software"]</h2>
+                <p class="resource-description">
+                    @Localizer["The International Space Station (ISS) itself is a key resource in this collaboration. The ISS serves as a research platform where astronauts conduct experiments in microgravity. The data gathered from these experiments are vital for advancing space science, medical research, and technology development."]
+                </p>
+            </div>
+
+            <div class="resource-block">
+                <h2 class="resource-title">@Localizer["Human Resources"]</h2>
+                <p class="resource-description">
+                    @Localizer["NASA scientists and engineers are involved in mission planning, research, and data analysis from the missions conducted by SpaceX."]
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

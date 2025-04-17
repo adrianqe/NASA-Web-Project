@@ -1,0 +1,86 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+@{
+    ViewData["Title"] = Localizer["ResultsAndPublications"];
+}
+
+<style>
+    .publications-container {
+        max-width: 1000px;
+        margin: 20px auto;
+        display: flex;
+        gap: 30px;
+    }
+
+    .publication-img {
+        width: 300px;
+        object-fit: contain;
+    }
+
+    .publications-content {
+        flex: 1;
+    }
+
+    .publication-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    .publication-description {
+        font-size: 16px;
+        line-height: 1.6;
+        text-align: justify;
+        margin-bottom: 30px;
+    }
+
+    .page-title {
+        text-align: center;
+        margin: 30px 0;
+        font-size: 36px;
+        font-weight: bold;
+    }
+
+    .back-button {
+        border: 1px solid #e60000;
+        color: #e60000;
+        background-color: transparent;
+        padding: 5px 15px;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+
+    .back-button:hover {
+        background-color: #e60000;
+        color: white;
+    }
+</style>
+
+<div class="container">
+
+    <h1 class="page-title">@Localizer["Publications"]</h1>
+
+    <button class="back-button" onclick="window.location.href='/ResearchPrograms/SpaceX'">
+        @Localizer["Back"]
+    </button>
+
+    <div class="publications-container">
+        <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/M2b688d158365c536b46e4da17790c12a1743113680717" class="publication-img" alt="Commercial Crew Program">
+
+        <div class="publications-content">
+            <h2 class="publication-title">@Localizer["SpaceX's Crew Dragon Development"]</h2>
+            <p class="publication-description">
+                @Localizer["SpaceX has published reports on the development of the Crew Dragon spacecraft, highlighting key milestones such as static fire tests, uncrewed missions, and crew safety simulations. These publications discuss the spacecraft's advanced systems, including the launch escape system and autonomous docking technology. These technological advancements ensure the Crew Dragon can safely transport astronauts to and from the ISS."]
+            </p>
+
+            <h2 class="publication-title">@Localizer["NASA Technical Publications"]</h2>
+            <p class="publication-description">
+                @Localizer["NASA has released technical papers detailing the Commercial Crew Program and its partnerships with private companies like SpaceX. These publications focus on the mission architecture, spacecraft design, and crew safety required for transporting astronauts to the International Space Station (ISS). These documents outline key operational aspects and safety protocols for human spaceflight, ensuring that both NASA and its private partners can meet the required standards for space missions."]
+            </p>
+        </div>
+    </div>
+</div>

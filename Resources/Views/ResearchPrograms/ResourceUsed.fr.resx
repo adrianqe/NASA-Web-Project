@@ -117,25 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Investigators in charge" xml:space="preserve">
-    <value>Investigateurs en charge</value>
-  </data>
   <data name="Back" xml:space="preserve">
     <value>Arrière</value>
   </data>
-  <data name="Name:" xml:space="preserve">
-    <value>Nom:</value>
+  <data name="Resources Used" xml:space="preserve">
+    <value>Ressources utilisées</value>
   </data>
-  <data name="Afiliation:" xml:space="preserve">
-    <value>Affiliation:</value>
+  <data name="Raptor Engines" xml:space="preserve">
+    <value>Moteurs Raptor</value>
   </data>
-  <data name="Specialization:" xml:space="preserve">
-    <value>Spécialisation:</value>
+  <data name="The Raptor engines are used in the Starship vehicle and are being developed for the next generation of space propulsion systems." xml:space="preserve">
+    <value>Les moteurs Raptor sont utilisés dans le véhicule Starship et sont en cours de développement pour la prochaine génération de systèmes de propulsion spatiale.</value>
   </data>
-  <data name="Space habitat engineering" xml:space="preserve">
-    <value>ngénierie des habitats spatiaux</value>
+  <data name="Primary Resource: The Falcon 9 is a reusable rocket developed by SpaceX, used to launch the Crew Dragon spacecraft and other payloads into orbit. The Falcon 9 is known for its reusability; its first stage can land back on Earth and be reused for subsequent missions, drastically reducing launch costs." xml:space="preserve">
+    <value>Ressource principale : Le Falcon 9 est une fusée réutilisable développée par SpaceX, utilisée pour lancer le vaisseau spatial Crew Dragon et d'autres charges utiles en orbite. Le Falcon 9 est connu pour sa réutilisation ; son premier étage peut atterrir sur Terre et être réutilisé pour des missions ultérieures, réduisant considérablement les coûts de lancement.</value>
   </data>
-  <data name="Agriculture in extreme environments" xml:space="preserve">
-    <value>Agriculture dans des environnements extrêmes</value>
+  <data name="Software" xml:space="preserve">
+    <value>Logiciel</value>
+  </data>
+  <data name="The International Space Station (ISS) itself is a key resource in this collaboration. The ISS serves as a research platform where astronauts conduct experiments in microgravity. The data gathered from these experiments are vital for advancing space science, medical research, and technology development." xml:space="preserve">
+    <value>La Station spatiale internationale (ISS) elle-même est une ressource clé dans cette collaboration. L'ISS sert de plateforme de recherche où les astronautes effectuent des expériences en microgravité. Les données recueillies lors de ces expériences sont essentielles pour faire progresser la science spatiale, la recherche médicale et le développement technologique.</value>
+  </data>
+  <data name="Human Resources" xml:space="preserve">
+    <value>Ressources humaines</value>
+  </data>
+  <data name="NASA scientists and engineers are involved in mission planning, research, and data analysis from the missions conducted by SpaceX." xml:space="preserve">
+    <value>Les scientifiques et ingénieurs de la NASA participent à la planification des missions, à la recherche et à l'analyse des données des missions menées par SpaceX.</value>
   </data>
 </root>

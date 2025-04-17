@@ -1,0 +1,242 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+@{
+    ViewData["Title"] = "ProgramInformation";
+}
+
+<style>
+    .apollo-header {
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+        .apollo-header h1 {
+            font-size: 2.8rem;
+            font-weight: bold;
+        }
+
+        .apollo-header h2 {
+            font-size: 2.8rem;
+            font-weight: bold;
+        }
+
+        .apollo-header blockquote {
+            font-style: italic;
+            color: #555;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        .apollo-header p {
+            font-size: 1.1rem;
+            margin: 5px 0;
+        }
+
+    .apollo-stats {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        margin-top: 30px;
+    }
+
+    .stat-box {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+        .stat-box strong {
+            display: block;
+            font-size: 2.5rem;
+            color: #e60000;
+        }
+
+    .apollo-section {
+        padding: 60px 20px;
+        max-width: 800px;
+        margin: auto;
+    }
+
+        .apollo-section h2 {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .apollo-section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .apollo-section a {
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+    .crew-section {
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+        .crew-section h2 {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+    .crew-card {
+        display: flex;
+        max-width: 800px;
+        margin: auto;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+        .crew-card img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .crew-card .crew-info {
+            text-align: left;
+            padding-left: 20px;
+        }
+
+            .crew-card .crew-info h3 {
+                font-size: 1.4rem;
+                margin-bottom: 10px;
+            }
+
+            .crew-card .crew-info p {
+                margin: 3px 0;
+            }
+
+    .image-nasa {
+        height: 400px; /* Increased height to fill the card better */
+        width: 100%;
+        object-fit: contain;
+        object-position: center;
+        display: block; /* Removes any inherent spacing */
+    }
+
+    .apollo-header p {
+        font-size: 1.1rem;
+        margin: 5px auto; /* Cambiado de "5px 0" a "5px auto" para centrar */
+        max-width: 80%; /* Limita el ancho del párrafo al 80% del contenedor */
+    }
+
+    .apollo-header h4 {
+        margin: 5px auto; /* Cambiado de "5px 0" a "5px auto" para centrar */
+        max-width: 80%; /* Limita el ancho del párrafo al 80% del contenedor */
+    }
+
+    .apollo-header h2 {
+        
+    }
+    .apollo-section p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin: 0 auto; /* Centra los párrafos */
+        max-width: 80%; /* Limita el ancho del párrafo */
+    }
+
+    .text-justify {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        max-width: 80%; /* Limita el ancho del texto justificado */
+    }
+
+    .back-button {
+        border: 1px solid #e60000;
+        color: #e60000;
+        background-color: transparent;
+        padding: 5px 15px;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+
+        .back-button:hover {
+            background-color: #e60000;
+            color: white;
+        }
+</style>
+
+<div class="apollo-header">
+    
+	<h1>@Localizer["Program Information"]</h1>
+
+    <button class="back-button mb-4 d-flex justify-content-start" onclick="window.location.href='/ResearchPrograms/SpaceX'">
+		@Localizer["Back"]
+	</button>
+    
+    
+
+    <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/Mcb2038e096814d3aaa6add5978951ea91743111816629" alt="Commercial Crew Program" class="image-nasa mt-4" />
+    <h2 class="mt-4">@Localizer["NASA and SpaceX: Commercial Crew Program"]</h2>
+
+    <h2 class="mt-5 m">@Localizer["Objectives"]</h2>
+
+    <p class="text-justify mt-4">
+        <b>@Localizer["Safe astronaut transportation:"]</b> @Localizer["The main goal is to ensure available vehicles for transporting astronauts to the ISS and other space destinations."]
+        </p>
+    <p class="text-justify mt-4">
+        <b>@Localizer["Encouraging commercial innovation:"]</b> @Localizer["NASA's goal is for private companies to take a key role in developing and operating these spacecraft, fostering competition and innovation in the space industry."]
+    </p>
+    <p class="text-justify mt-4">
+        <b>@Localizer["Cost reduction:"]</b> @Localizer["By involving commercial companies like SpaceX, NASA seeks to reduce the costs associated with space flights, promoting technology reuse such as rockets and spacecraft."]
+    </p>
+    <p class="text-justify mt-4">
+        <b>@Localizer["Development of reusable spacecraft:"]</b> @Localizer["SpaceX, as part of this program, designed reusable spacecraft like Crew Dragon that help lower costs and improve efficiency."]
+    </p>
+
+    <h2 class="mt-5">@Localizer["Collaborations"]</h2>
+        <p class="text-justify mt-4">
+        @Localizer["The Commercial Crew Program by NASA, in collaboration with SpaceX, aims to provide safe and cost-effective transportation for astronauts to the International Space Station (ISS) using commercial spacecraft."]
+        </p>
+        <p class="text-justify mt-4">
+        @Localizer["Crew Dragon is capable of being fully autonomous, although astronauts can manually control it in case of an emergency. This represents a significant advancement in the safety and reliability of crewed spaceflights."]
+        </p>
+        <p class="text-justify mt-4">
+        @Localizer["The Demo-2 mission in May 2020 marked the first crewed flight with Crew Dragon. Astronauts Robert Behnken and Douglas Hurley were transported to the ISS. This flight was a major milestone as it was the first time a private company transported astronauts to the ISS, rather than NASA or the Russian space agency Roscosmos."]
+        </p>
+        <p class="text-justify mt-4">
+        @Localizer["The collaboration is not limited to crewed missions. SpaceX also provides cargo transport to the ISS using its Cargo Dragon capsule. NASA and SpaceX have worked closely on these resupply missions, which are conducted regularly."]
+        </p>
+
+    <h4 class="text-md-start mt-4">
+        <b>@Localizer["Cost and Efficiency"]</b>
+    </h4>
+    <p class="text-justify mt-4">
+        @Localizer["Cost and Efficiency  One of the main goals of the collaboration is to reduce the cost of space transportation. SpaceX uses its Falcon 9 rocket to launch both Crew Dragon and Cargo Dragon. The use of reusable rockets, like the Falcon 9, has been a key innovation that significantly reduces the cost of space missions."]
+    </p>
+
+    <h4 class="text-md-start mt-4">
+        <b>@Localizer["Regular Crew Missions"]</b>
+    </h4>
+    <p class="text-justify mt-4">
+        @Localizer["Following the success of the demonstration flights and the first crewed missions, SpaceX began conducting regular flights under the Commercial Crew Program. These Crew Dragon flights allow NASA to maintain consistent access to the ISS, especially after the retirement of NASA's Space Shuttle program in 2011."]
+    </p>
+
+    <h4 class="text-md-start mt-4">
+        <b>@Localizer["Future Missions Beyond the ISS"]</b>
+    </h4>
+    <p class="text-justify mt-4">
+        @Localizer["NASA and SpaceX are also collaborating for future exploration missions beyond low Earth orbit, such as trips to the Moon under the Artemis Program and potential missions to Mars. SpaceX is developing the Starship spacecraft as part of this collaboration for more ambitious, long-duration missions."]
+    </p>
+    
+    <h2 class="mt-5">@Localizer["Impact of the Collaboration"]</h2>
+
+    <p class="text-justify mt-4">
+        @Localizer["One of the most significant impacts of the collaboration is the advancement of reusable spacecraft technology. SpaceX's Falcon 9 rocket and Crew Dragon spacecraft are designed to be reused multiple times, reducing the cost of space missions. This reusability could eventually make space travel more affordable and frequent, opening up new possibilities for both crewed and uncrewed missions."]
+    </p>
+
+    <p class="text-justify mt-4">
+        @Localizer["The Crew Dragon features highly advanced autonomous systems, including automatic docking with the ISS, which has set new standards in spacecraft autonomy. This technology helps improve the safety of astronauts and reduces the complexity of space missions."]
+    </p>
+
+    <p class="text-justify mt-4">
+        @Localizer["SpaceX’s leadership in space transportation has positioned the U.S. as a key player in space exploration again, reducing reliance on other countries (like Russia for crew transportation) and establishing partnerships with space agencies worldwide, such as ESA (European Space Agency) and JAXA (Japan)."]
+    </p>
+</div>

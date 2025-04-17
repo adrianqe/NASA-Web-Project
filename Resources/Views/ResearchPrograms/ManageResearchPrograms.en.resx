@@ -117,25 +117,43 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Investigators in charge" xml:space="preserve">
-    <value>Investigateurs en charge</value>
+  <data name="Manage projects" xml:space="preserve">
+    <value>Manage projects</value>
   </data>
   <data name="Back" xml:space="preserve">
-    <value>Arrière</value>
+    <value>Back</value>
   </data>
-  <data name="Name:" xml:space="preserve">
-    <value>Nom:</value>
+  <data name="Search Project" xml:space="preserve">
+    <value>Search Project</value>
   </data>
-  <data name="Afiliation:" xml:space="preserve">
-    <value>Affiliation:</value>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
   </data>
-  <data name="Specialization:" xml:space="preserve">
-    <value>Spécialisation:</value>
+  <data name="Last projects" xml:space="preserve">
+    <value>Last projects</value>
   </data>
-  <data name="Space habitat engineering" xml:space="preserve">
-    <value>ngénierie des habitats spatiaux</value>
+  <data name="SimulatingLifeOnMars" xml:space="preserve">
+    <value>Simulating life on Mars</value>
   </data>
-  <data name="Agriculture in extreme environments" xml:space="preserve">
-    <value>Agriculture dans des environnements extrêmes</value>
+  <data name="Mars" xml:space="preserve">
+    <value>Mars</value>
+  </data>
+  <data name="Coordinator" xml:space="preserve">
+    <value>Coordinator</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Human Resources" xml:space="preserve">
+    <value>Human Resources</value>
+  </data>
+  <data name="Budget balance" xml:space="preserve">
+    <value>Budget balance</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="Moonwalks" xml:space="preserve">
+    <value>Moonwalks</value>
   </data>
 </root>

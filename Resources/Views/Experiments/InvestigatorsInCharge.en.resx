@@ -132,4 +132,10 @@
   <data name="Specialization:" xml:space="preserve">
     <value>Specialization:</value>
   </data>
+  <data name="Space habitat engineering" xml:space="preserve">
+    <value>Space habitat engineering</value>
+  </data>
+  <data name="Agriculture in extreme environments" xml:space="preserve">
+    <value>Agriculture in extreme environments</value>
+  </data>
 </root>

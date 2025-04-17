@@ -117,25 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Investigators in charge" xml:space="preserve">
-    <value>Investigateurs en charge</value>
-  </data>
   <data name="Back" xml:space="preserve">
-    <value>Arrière</value>
+    <value />
   </data>
-  <data name="Name:" xml:space="preserve">
-    <value>Nom:</value>
+  <data name="Resources Used" xml:space="preserve">
+    <value />
   </data>
-  <data name="Afiliation:" xml:space="preserve">
-    <value>Affiliation:</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Raptor Engines" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
-  <data name="Specialization:" xml:space="preserve">
-    <value>Spécialisation:</value>
+  <data name="The Raptor engines are used in the Starship vehicle and are being developed for the next generation of space propulsion systems." xml:space="preserve">
+    <value />
   </data>
-  <data name="Space habitat engineering" xml:space="preserve">
-    <value>ngénierie des habitats spatiaux</value>
+  <data name="Primary Resource: The Falcon 9 is a reusable rocket developed by SpaceX, used to launch the Crew Dragon spacecraft and other payloads into orbit. The Falcon 9 is known for its reusability; its first stage can land back on Earth and be reused for subsequent missions, drastically reducing launch costs." xml:space="preserve">
+    <value />
   </data>
-  <data name="Agriculture in extreme environments" xml:space="preserve">
-    <value>Agriculture dans des environnements extrêmes</value>
+  <data name="Software" xml:space="preserve">
+    <value />
+  </data>
+  <data name="The International Space Station (ISS) itself is a key resource in this collaboration. The ISS serves as a research platform where astronauts conduct experiments in microgravity. The data gathered from these experiments are vital for advancing space science, medical research, and technology development." xml:space="preserve">
+    <value />
+  </data>
+  <data name="Human Resources" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NASA scientists and engineers are involved in mission planning, research, and data analysis from the missions conducted by SpaceX." xml:space="preserve">
+    <value />
   </data>
 </root>
