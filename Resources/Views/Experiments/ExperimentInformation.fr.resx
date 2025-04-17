@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Experiment Information" xml:space="preserve">
+    <value>Informations sur l'expérience</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Arrière</value>
+  </data>
+  <data name="Simulating Life on Mars: Evaluating an Autonomous Habitat Under Conditions of Prolonged Isolation" xml:space="preserve">
+    <value>Simulation vie sur Mars : évaluation d’un habitat autonome en conditions d’isolement prolongé</value>
+  </data>
+  <data name="Objectives" xml:space="preserve">
+    <value>Objectifs</value>
+  </data>
+  <data name="1. Evaluate habitat self-sufficiency in terms of oxygen generation, food production, and waste management." xml:space="preserve">
+    <value>1. Évaluer l’autosuffisance de l’habitat en matière de production d’oxygène, de nourriture et de gestion des déchets.</value>
+  </data>
+  <data name="2. Analyze the impact of confinement on the physical, mental, and cognitive performance of crew members." xml:space="preserve">
+    <value>2. Analyser l’impact du confinement sur les performances physiques, mentales et cognitives de l’équipage.</value>
+  </data>
+  <data name="3. Test advanced life support systems, including water recycling, air purification, and renewable energy production." xml:space="preserve">
+    <value>3. Tester les systèmes de support de vie avancés, y compris le recyclage de l’eau, la purification de l’air et la production d’énergie renouvelable.</value>
+  </data>
+  <data name="4. Measure the efficiency of hydroponic and aeroponic crops in a closed environment with controlled radiation levels." xml:space="preserve">
+    <value>4. Mesurer l’efficacité des cultures hydroponiques et aéroponiques dans un environnement fermé avec un contrôle des niveaux de radiation.</value>
+  </data>
+  <data name="5. Simulate daily operations on Mars, including EVA (Extravehicular Activities), equipment maintenance, and emergency protocols." xml:space="preserve">
+    <value>5. Simuler les opérations quotidiennes sur Mars, y compris les EVA, l’entretien de l’équipement et les protocoles d’urgence.</value>
+  </data>
+  <data name="Hypothesis" xml:space="preserve">
+    <value>Hypothèses</value>
+  </data>
+  <data name="- A closed, self-sufficient Martian habitat can effectively sustain a group of six astronauts for at least 12 months without external supplies." xml:space="preserve">
+    <value>- Un habitat martien fermé et autonome peut maintenir efficacement un groupe de six astronautes pendant au moins 12 mois sans ravitaillement extérieur.</value>
+  </data>
+  <data name="- Prolonged confinement and exposure to a simulated Martian environment can cause psychological and physiological disturbances in the crew." xml:space="preserve">
+    <value>- Le confinement prolongé et l’exposition à un environnement martien simulé peuvent provoquer des troubles psychologiques et physiologiques chez l’équipage.</value>
+  </data>
+  <data name="- Hydroponic and aeroponic crops can provide at least 50% of the crew's nutritional requirements." xml:space="preserve">
+    <value>- Les cultures hydroponiques et aéroponiques peuvent fournir au moins 50 % des besoins nutritionnels de l’équipage.</value>
+  </data>
+  <data name="Scientific Research in the Mars Mission Simulation Experiment" xml:space="preserve">
+    <value>Recherche scientifique dans l’expérience de simulation de mission martienne</value>
+  </data>
+  <data name="Methodology:" xml:space="preserve">
+    <value>Méthodologie:</value>
+  </data>
+  <data name="1. Simulation of Martian conditions in a controlled environment on Earth, using atmosphere and temperature simulation chambers." xml:space="preserve">
+    <value>1. Simulation des conditions martiennes dans un environnement contrôlé sur Terre, à l’aide de chambres de simulation d’atmosphère et de température.</value>
+  </data>
+  <data name="2. Tests in isolation habitats where researchers live in conditions similar to a real mission to Mars." xml:space="preserve">
+    <value>2. Tests dans des habitats d’isolement où les chercheurs vivent dans des conditions semblables à une mission réelle vers Mars.</value>
+  </data>
+  <data name="3. Use of autonomous robots and drones to study the performance of technologies in a simulated environment." xml:space="preserve">
+    <value>3. Utilisation de robots autonomes et de drones pour étudier les performances des technologies dans un environnement simulé.</value>
+  </data>
+  <data name="Analysis Techniques:" xml:space="preserve">
+    <value>Techniques d’analyse:</value>
+  </data>
+  <data name="- Mass spectrometry to assess the effects of radiation on habitat materials." xml:space="preserve">
+    <value>- Spectrométrie de masse pour évaluer les effets des radiations sur les matériaux de l’habitat.</value>
+  </data>
+  <data name="- Biological analysis of microbiomes within the habitat to study the viability of life on long-term missions." xml:space="preserve">
+    <value>- Analyse biologique des microbiomes dans l’habitat pour étudier la viabilité de la vie lors de missions de longue durée.</value>
+  </data>
+  <data name="- Psychological and cognitive tests on researchers to assess the impact of isolation." xml:space="preserve">
+    <value>- Tests psychologiques et cognitifs sur les chercheurs pour évaluer l’impact de l’isolement.</value>
+  </data>
+  <data name="- Energy efficiency analysis in life support systems." xml:space="preserve">
+    <value>- Analyse de l’efficacité énergétique des systèmes de support de vie.</value>
+  </data>
+  <data name="Applied Theoretical Models:" xml:space="preserve">
+    <value>Modèles théoriques appliqués</value>
+  </data>
+  <data name="- Closed Ecological Life Support Systems (CELSS): autonomous systems designed to maintain life through the regeneration of air, water, and food." xml:space="preserve">
+    <value>- Systèmes écologiques fermés de support de vie (CELSS) : systèmes autonomes conçus pour maintenir la vie grâce à la régénération de l’air, de l’eau et de la nourriture.</value>
+  </data>
+  <data name="- Psychological resilience models: to understand how astronauts adapt to extreme and isolated conditions." xml:space="preserve">
+    <value>- Modèles de résilience psychologique : pour comprendre comment les astronautes s’adaptent à des conditions extrêmes et isolées.</value>
+  </data>
+  <data name="- Systems engineering for mission architecture design." xml:space="preserve">
+    <value>- Ingénierie des systèmes pour la conception de l’architecture de mission.</value>
+  </data>
+  <data name="Hypothesis under Evaluation:" xml:space="preserve">
+    <value> Hypothèses en cours d’évaluation:</value>
+  </data>
+  <data name="- Can a closed, autonomous system support a human crew for a year on Mars without logistical resupply?" xml:space="preserve">
+    <value>- Un système fermé et autonome peut-il soutenir un équipage humain pendant un an sur Mars sans ravitaillement logistique ?</value>
+  </data>
+  <data name="- What are the effects of long-term isolation on the psychological and physical health of astronauts?" xml:space="preserve">
+    <value>- Quels sont les effets de l’isolement à long terme sur la santé psychologique et physique des astronautes ?</value>
+  </data>
+  <data name="- Is it possible to achieve food autonomy through hydroponic and aeroponic agriculture in an enclosed space?" xml:space="preserve">
+    <value>- Est-il possible d’atteindre l’autonomie alimentaire grâce à l’agriculture hydroponique et aéroponique dans un espace fermé ?</value>
+  </data>
+  <data name="Duration of the Experiment" xml:space="preserve">
+    <value>Durée de l'expérience</value>
+  </data>
+  <data name="The experiment lasts 12 months, simulating a full Martian mission, including communication delay and external environmental conditions." xml:space="preserve">
+    <value>L’expérience dure 12 mois, simulant une mission complète sur Mars, y compris le délai de communication et les conditions environnementales externes.</value>
+  </data>
+  <data name="- Plant growth models in simulated Martian soils." xml:space="preserve">
+    <value>- Modèles de croissance des plantes dans des sols martiens simulés</value>
+  </data>
+  <data name="- Radiation propagation simulations and protective shielding." xml:space="preserve">
+    <value>- Simulations de propagation de radiation et blindage protecteur</value>
+  </data>
+  <data name="- Models of oxygen consumption and water recycling in closed systems." xml:space="preserve">
+    <value>- Modèles de consommation d'oxygène et de recyclage de l'eau dans des systèmes fermés</value>
+  </data>
+  <data name="- Design of more resilient and self-sufficient habitats." xml:space="preserve">
+    <value>- Conception d'habitats plus résilients et autonomes</value>
+  </data>
+  <data name="- Development of protocols to reduce stress on long missions." xml:space="preserve">
+    <value>- Développement de protocoles pour réduire le stress lors de longues missions</value>
+  </data>
+  <data name="- Optimizing resource use in space colonies." xml:space="preserve">
+    <value>- Optimisation de l'utilisation des ressources dans les colonies spatiales</value>
+  </data>
+  <data name="18 months (including 3-month pre-simulation, 12-month main phase and 3-month post-experiment analysis)." xml:space="preserve">
+    <value>18 mois (y compris 3 mois de pré-simulation, 12 mois de phase principale et 3 mois d'analyse post-expérience).</value>
+  </data>
+  <data name="- Facilities: Space Habitat Simulation Center (NASA Johnson Space Center)" xml:space="preserve">
+    <value>- Installations : Centre de simulation d'habitats spatiaux (Centre spatial Johnson de la NASA)</value>
+  </data>
+  <data name="- Conditions: Isolated environment with simulated reduced gravity, Martian diurnal cycle (24h 37min), and radiation level control." xml:space="preserve">
+    <value>- Conditions : Environnement isolé avec gravité réduite simulée, cycle diurne martien (24h 37min) et contrôle du niveau de radiation</value>
+  </data>
+  <data name="1. Life support systems can maintain a crew in isolation for at least 12 months without external intervention." xml:space="preserve">
+    <value>1. Les systèmes de support vital peuvent maintenir un équipage en isolement pendant au moins 12 mois sans intervention externe.</value>
+  </data>
+  <data name="2. The psychological conditions of the crew members improve with simulated natural light and day/night cycles adapted to Mars." xml:space="preserve">
+    <value>2. Les conditions psychologiques des membres de l'équipage s'améliorent avec une lumière naturelle simulée et des cycles jour/nuit adaptés à Mars.</value>
+  </data>
+  <data name="3. Autonomous robots can reduce workload by 30% when performing exploration and maintenance tasks." xml:space="preserve">
+    <value>3. Les robots autonomes peuvent réduire la charge de travail de 30 % lors de l'exécution de tâches d'exploration et de maintenance.</value>
+  </data>
+</root>

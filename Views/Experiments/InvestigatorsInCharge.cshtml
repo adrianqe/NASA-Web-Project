@@ -1,0 +1,119 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+@{
+    ViewData["Title"] = Localizer["InvestigatorsInCharge"];
+}
+
+<style>
+    .card-container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    .investigator-img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    .investigator-info {
+        padding-left: 30px;
+        flex: 1;
+    }
+
+    .info-row {
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    .info-label {
+        font-weight: bold;
+        font-size: 18px;
+        width: 180px;
+    }
+
+    .info-value {
+        font-size: 18px;
+    }
+
+    .page-title {
+        text-align: center;
+        margin: 30px 0;
+        font-size: 36px;
+        font-weight: bold;
+    }
+
+    .back-button {
+        border: 1px solid #e60000;
+        color: #e60000;
+        background-color: transparent;
+        padding: 5px 15px;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+
+    .back-button:hover {
+        background-color: #e60000;
+        color: white;
+    }
+</style>
+
+<div class="container">
+    <h1 class="page-title">@Localizer["Investigators in charge"]</h1>
+
+    <button class="back-button" onclick="window.location.href='/Experiments/SimulatingLifeOnMars'">
+        @Localizer["Back"]
+    </button>
+
+    <div class="card-container">
+        <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/M1cb447d5c29976ad55ce737ac061e6711742637697170" class="investigator-img" alt="Stephanie Wilson  ">
+
+        <div class="investigator-info">
+            <div class="info-row">
+                <div class="info-label">@Localizer["Name:"]</div>
+                <div class="info-value">Dr. Stephanie Wilson  </div>
+            </div>
+
+            <div class="info-row">
+                <div class="info-label">@Localizer["Afiliation:"]</div>
+                <div class="info-value">NASA Johnson Space Center</div>
+            </div>
+
+            <div class="info-row">
+                <div class="info-label">@Localizer["Specialization:"]</div>
+                <div class="info-value">Space habitat engineering</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="investigator-info">
+            <div class="info-row">
+                <div class="info-label">@Localizer["Name:"]</div>
+                <div class="info-value">Dr. Jeffrey A. Hoffman</div>
+            </div>
+
+            <div class="info-row">
+                <div class="info-label">@Localizer["Afiliation:"]</div>
+                <div class="info-value">NASA Kennedy Space Center</div>
+            </div>
+
+            <div class="info-row">
+                <div class="info-label">@Localizer["Specialization:"]</div>
+                <div class="info-value">Agriculture in extreme environments</div>
+            </div>
+        </div>
+
+        <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/M36f508cc1ea3f59b1743c1b47c241c461742637700976" class="investigator-img" alt="Kathy Lueders">
+    </div>
+</div>

@@ -1,0 +1,125 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+@{
+    ViewData["Title"] = Localizer["ResourceUsed"];
+}
+
+<style>
+    .resource-container {
+        max-width: 1000px;
+        margin: 20px auto;
+    }
+
+    .resource-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+
+    .resource-block {
+        width: 48%;
+    }
+
+    .resource-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .resource-description {
+        font-size: 16px;
+        line-height: 1.6;
+        text-align: justify;
+    }
+
+    .page-title {
+        text-align: center;
+        margin: 30px 0;
+        font-size: 36px;
+        font-weight: bold;
+    }
+
+    .back-button {
+        border: 1px solid #e60000;
+        color: #e60000;
+        background-color: transparent;
+        padding: 5px 15px;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+
+    .back-button:hover {
+        background-color: #e60000;
+        color: white;
+    }
+</style>
+
+<div class="container">
+    <h1 class="page-title">@Localizer["Resources Used"]</h1>
+
+    <button class="back-button" onclick="window.location.href='/Experiments/SimulatingLifeOnMars'">
+        @Localizer["Back"]
+    </button>
+
+    <div class="resource-container">
+        <div class="resource-row">
+            <div class="resource-block">
+                <h2 class="resource-title">@Localizer["Equipment"]</h2>
+                <p class="resource-description">
+                    @Localizer["- Sealed inflatable habitat module"]
+                </p>
+                <p class="resource-description">
+                    @Localizer["- Life support systems with water and air recycling"]
+                </p>
+                <p class="resource-description">
+                    @Localizer["- Greenhouse with automated hydroponic cultivation"]
+                </p>
+            </div>
+
+            <div class="resource-block">
+                <h2 class="resource-title">@Localizer["Laboratories"]</h2>
+                <p class="resource-description">
+                    @Localizer["- Reduced gravity simulator"]
+                </p>
+                <p class="resource-description">
+                    @Localizer["- Controlled radiation chamber to replicate Martian conditions"]
+                </p>
+                <p class="resource-description">
+                    @Localizer["- Biometric data monitoring center"]
+                </p>
+            </div>
+        </div>
+
+        <div class="resource-row">
+            <div class="resource-block">
+                <h2 class="resource-title">@Localizer["Software"]</h2>
+                <p class="resource-description">
+                    @Localizer["- Martian climate simulation models"]
+                </p>
+                <p class="resource-description">
+                    @Localizer["- Real-time monitoring systems for health and habitability"]
+                </p>
+                <p class="resource-description">
+                    @Localizer["- AI for habitat resource management"]
+                </p>
+            </div>
+
+            <div class="resource-block">
+                <h2 class="resource-title">@Localizer["Analysis technology"]</h2>
+                <p class="resource-description">
+                    @Localizer["- CO2 and O2 sensors for environmental monitoring"]
+                </p>
+                <p class="resource-description">
+                    @Localizer["- Electron microscopes for analysis of microorganisms in the habitat"]
+                </p>
+                <p class="resource-description">
+                    @Localizer["- Spectrometry cameras for measuring nutrients in crops"]
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

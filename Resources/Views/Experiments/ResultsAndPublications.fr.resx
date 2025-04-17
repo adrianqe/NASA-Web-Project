@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Results and Publications" xml:space="preserve">
+    <value>Résultats et publications</value>
+  </data>
+  <data name="Data Collected" xml:space="preserve">
+    <value>Données collectées</value>
+  </data>
+  <data name="1. Life support efficiency:" xml:space="preserve">
+    <value>1. Efficacité du soutien vital:</value>
+  </data>
+  <data name="- Amount of oxygen generated vs. consumed." xml:space="preserve">
+    <value>- Quantité d'oxygène générée vs. consommée.</value>
+  </data>
+  <data name="- Water recycling and purification rate." xml:space="preserve">
+    <value>- Taux de recyclage et de purification de l'eau.</value>
+  </data>
+  <data name="2. Impact on the crew:" xml:space="preserve">
+    <value>2. Impact sur l'équipage :</value>
+  </data>
+  <data name="- Changes in body composition and metabolism." xml:space="preserve">
+    <value>- Changements dans la composition corporelle et le métabolisme.</value>
+  </data>
+  <data name="- Psychological alterations due to isolation and confinement." xml:space="preserve">
+    <value>- Altérations psychologiques dues à l'isolement et au confinement.</value>
+  </data>
+  <data name="3. Agricultural production:" xml:space="preserve">
+    <value>3. Production agricole:</value>
+  </data>
+  <data name="- Crop performance in closed environments with controlled radiation levels." xml:space="preserve">
+    <value>- Performance des cultures en environnements fermés avec des niveaux de radiation contrôlés.</value>
+  </data>
+  <data name="- Nutritional quality of cultivated foods." xml:space="preserve">
+    <value>- Qualité nutritionnelle des aliments cultivés.</value>
+  </data>
+  <data name="Conclusions" xml:space="preserve">
+    <value>Conclusions</value>
+  </data>
+  <data name="- The habitat proved to be 85% self-sufficient, although there were fluctuations in oxygen production that required manual interventions." xml:space="preserve">
+    <value>- L'habitat s'est révélé être autosuffisant à 85 %, bien que des fluctuations dans la production d'oxygène aient nécessité des interventions manuelles.</value>
+  </data>
+  <data name="- Changes in crew psychology, such as stress and anxiety due to prolonged isolation, were recorded, suggesting the need for emotional well-being strategies." xml:space="preserve">
+    <value>- Des changements dans la psychologie de l'équipage, tels que le stress et l'anxiété dus à l'isolement prolongé, ont été enregistrés, suggérant la nécessité de stratégies de bien-être émotionnel.</value>
+  </data>
+  <data name="- Aeroponic crops outperformed hydroponic crops by 30%, which could be key in future missions." xml:space="preserve">
+    <value>- Les cultures aéroponiques ont surpassé les cultures hydroponiques de 30 %, ce qui pourrait être essentiel pour les missions futures.</value>
+  </data>
+  <data name="- Development of artificial intelligence systems for resource optimization in space habitats." xml:space="preserve">
+    <value>- Développement de systèmes d'intelligence artificielle pour l'optimisation des ressources dans les habitats spatiaux.</value>
+  </data>
+  <data name="- Creation of new psychological support strategies for astronauts on long-duration missions." xml:space="preserve">
+    <value>- Création de nouvelles stratégies de soutien psychologique pour les astronautes en missions de longue durée.</value>
+  </data>
+  <data name="- Implementation of advanced space agriculture techniques for future colonies on Mars." xml:space="preserve">
+    <value>- Mise en œuvre de techniques avancées d'agriculture spatiale pour les futures colonies sur Mars.</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Arrière</value>
+  </data>
+  <data name="Impact on future research" xml:space="preserve">
+    <value>Impact sur la recherche future</value>
+  </data>
+</root>

@@ -1,0 +1,298 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+@{
+    ViewData["Title"] = "ExperimentInformation";
+}
+
+<style>
+    .apollo-header {
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+        .apollo-header h1 {
+            font-size: 2.8rem;
+            font-weight: bold;
+        }
+
+        .apollo-header h2 {
+            font-size: 2.8rem;
+            font-weight: bold;
+        }
+
+        .apollo-header blockquote {
+            font-style: italic;
+            color: #555;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        .apollo-header p {
+            font-size: 1.1rem;
+            margin: 5px 0;
+        }
+
+    .apollo-stats {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        margin-top: 30px;
+    }
+
+    .stat-box {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+        .stat-box strong {
+            display: block;
+            font-size: 2.5rem;
+            color: #e60000;
+        }
+
+    .apollo-section {
+        padding: 60px 20px;
+        max-width: 800px;
+        margin: auto;
+    }
+
+        .apollo-section h2 {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .apollo-section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .apollo-section a {
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+    .crew-section {
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+        .crew-section h2 {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+    .crew-card {
+        display: flex;
+        max-width: 800px;
+        margin: auto;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+        .crew-card img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .crew-card .crew-info {
+            text-align: left;
+            padding-left: 20px;
+        }
+
+            .crew-card .crew-info h3 {
+                font-size: 1.4rem;
+                margin-bottom: 10px;
+            }
+
+            .crew-card .crew-info p {
+                margin: 3px 0;
+            }
+
+    .image-nasa {
+        height: 400px; /* Increased height to fill the card better */
+        width: 100%;
+        object-fit: contain;
+        object-position: center;
+        display: block; /* Removes any inherent spacing */
+    }
+
+    .apollo-header p {
+        font-size: 1.1rem;
+        margin: 5px auto; /* Cambiado de "5px 0" a "5px auto" para centrar */
+        max-width: 80%; /* Limita el ancho del párrafo al 80% del contenedor */
+    }
+
+    .apollo-header h4 {
+        margin: 5px auto; /* Cambiado de "5px 0" a "5px auto" para centrar */
+        max-width: 80%; /* Limita el ancho del párrafo al 80% del contenedor */
+    }
+
+    .apollo-header h2 {
+
+    }
+    .apollo-section p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin: 0 auto; /* Centra los párrafos */
+        max-width: 80%; /* Limita el ancho del párrafo */
+    }
+
+    .text-justify {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        max-width: 80%; /* Limita el ancho del texto justificado */
+    }
+
+    .back-button {
+        border: 1px solid #e60000;
+        color: #e60000;
+        background-color: transparent;
+        padding: 5px 15px;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+
+        .back-button:hover {
+            background-color: #e60000;
+            color: white;
+        }
+</style>
+
+<div class="apollo-header">
+
+    <h1>@Localizer["Experiment Information"]</h1>
+
+    <button class="back-button mb-4 d-flex justify-content-start" onclick="window.location.href='/Experiments/SimulatingLifeOnMars'">
+        @Localizer["Back"]
+    </button>
+
+
+
+    <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/Mb7f0adf97c8a4c81a98d1c0e3943bcc51742626176623" alt="Life On Mars" class="image-nasa mt-4" />
+    <h2 class="mt-4">@Localizer["Simulating Life on Mars: Evaluating an Autonomous Habitat Under Conditions of Prolonged Isolation"]</h2>
+
+    <h2 class="mt-5 m">@Localizer["Objectives"]</h2>
+
+    <p class="text-justify mt-4">
+        @Localizer["1. Evaluate habitat self-sufficiency in terms of oxygen generation, food production, and waste management."]
+    </p>
+    <p class="text-justify mt-4">
+        @Localizer["2. Analyze the impact of confinement on the physical, mental, and cognitive performance of crew members."]
+    </p>
+    <p class="text-justify mt-4">
+        @Localizer["3. Test advanced life support systems, including water recycling, air purification, and renewable energy production."]
+    </p>
+    <p class="text-justify mt-4">
+        @Localizer["4. Measure the efficiency of hydroponic and aeroponic crops in a closed environment with controlled radiation levels."]
+    </p>
+    <p class="text-justify mt-4">
+        @Localizer["5. Simulate daily operations on Mars, including EVA (Extravehicular Activities), equipment maintenance, and emergency protocols."]
+    </p>
+
+    <h2 class="mt-5">@Localizer["Hypothesis"]</h2>
+    <p class="text-justify mt-4">
+        @Localizer["- A closed, self-sufficient Martian habitat can effectively sustain a group of six astronauts for at least 12 months without external supplies."]
+    </p>
+    <p class="text-justify mt-4">
+        @Localizer["- Prolonged confinement and exposure to a simulated Martian environment can cause psychological and physiological disturbances in the crew."]
+    </p>
+    <p class="text-justify mt-4">
+        @Localizer["- Hydroponic and aeroponic crops can provide at least 50% of the crew's nutritional requirements."]
+    </p>
+
+    <h2 class="mt-5">@Localizer["Scientific Research in the Mars Mission Simulation Experiment"]</h2>
+
+    <h4 class="text-md-start mt-4">
+        <b>@Localizer["Methodology:"]</b>
+    </h4>
+    <p class="text-justify mt-4">
+        @Localizer["1. Simulation of Martian conditions in a controlled environment on Earth, using atmosphere and temperature simulation chambers."]
+    </p>
+    <p class="text-justify mt-4">
+        @Localizer["2. Tests in isolation habitats where researchers live in conditions similar to a real mission to Mars."]
+    </p>
+    <p class="text-justify mt-4">
+        @Localizer["3. Use of autonomous robots and drones to study the performance of technologies in a simulated environment."]
+    </p>
+
+    <h4 class="text-md-start mt-4">
+        <b>@Localizer["Analysis Techniques:"]</b>
+    </h4>
+    <p class="text-justify mt-4">
+        @Localizer["- Mass spectrometry to assess the effects of radiation on habitat materials."]
+    </p>
+    <p class="text-justify mt-4">
+        @Localizer["- Biological analysis of microbiomes within the habitat to study the viability of life on long-term missions."]
+    </p>
+    <p class="text-justify mt-4">
+        @Localizer["- Psychological and cognitive tests on researchers to assess the impact of isolation."]
+    </p>
+    <p class="text-justify mt-4">
+        @Localizer["- Energy efficiency analysis in life support systems."]
+    </p>
+
+
+
+
+    <h4 class="text-md-start mt-4">
+        <b>@Localizer["Applied Theoretical Models:"]</b>
+    </h4>
+    <p class="text-justify mt-4">
+        @Localizer["- Plant growth models in simulated Martian soils."]
+    </p>
+    <p class="text-justify mt-4">
+        @Localizer["- Radiation propagation simulations and protective shielding."]
+    </p>
+    <p class="text-justify mt-4">
+        @Localizer["- Models of oxygen consumption and water recycling in closed systems."]
+    </p>
+
+
+    <h4 class="text-md-start mt-4">
+        <b>@Localizer["Hypothesis under Evaluation:"]</b>
+    </h4>
+    <p class="text-justify mt-4">
+        @Localizer["1. Life support systems can maintain a crew in isolation for at least 12 months without external intervention."]
+    </p>
+    <p class="text-justify mt-4">
+        @Localizer["2. The psychological conditions of the crew members improve with simulated natural light and day/night cycles adapted to Mars."]
+    </p>
+    <p class="text-justify mt-4">
+        @Localizer["3. Autonomous robots can reduce workload by 30% when performing exploration and maintenance tasks."]
+    </p>
+
+
+    <h4 class="text-md-start mt-4">
+        <b>@Localizer["Hypothesis under Evaluation:"]</b>
+    </h4>
+    <p class="text-justify mt-4">
+        @Localizer["- Design of more resilient and self-sufficient habitats."]
+    </p>
+    <p class="text-justify mt-4">
+        @Localizer["- Development of protocols to reduce stress on long missions."]
+    </p>
+    <p class="text-justify mt-4">
+        @Localizer["- Optimizing resource use in space colonies."]
+    </p>
+
+
+    <h2 class="mt-5">@Localizer["Duration of the Experiment"]</h2>
+
+    <p class="text-justify mt-4">
+        @Localizer["18 months (including 3-month pre-simulation, 12-month main phase and 3-month post-experiment analysis)."]
+    </p>
+
+    <h2 class="mt-5">@Localizer["Duration of the Experiment"]</h2>
+
+    <p class="text-justify mt-4">
+        @Localizer["- Facilities: Space Habitat Simulation Center (NASA Johnson Space Center)"]
+    </p>
+    <p class="text-justify mt-4">
+        @Localizer["- Conditions: Isolated environment with simulated reduced gravity, Martian diurnal cycle (24h 37min), and radiation level control."]
+    </p>
+</div>

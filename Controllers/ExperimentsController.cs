@@ -28,5 +28,21 @@ namespace NASAWebPrototype.Controllers
         {
             return View();
         }
+        public IActionResult ExperimentInformation()
+        {
+            return View();
+        }
+        public IActionResult ResourceUsed()
+        {
+            return View();
+        }
+        public IActionResult InvestigatorsInCharge()
+        {
+            return View();
+        }
+        public IActionResult ResultsAndPublications()
+        {
+            return View();
+        }
     }
 }
