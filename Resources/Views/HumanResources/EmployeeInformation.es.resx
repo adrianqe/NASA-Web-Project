@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Address" xml:space="preserve">
+    <value>Dirección</value>
+  </data>
+  <data name="American" xml:space="preserve">
+    <value>Estadounidense</value>
+  </data>
+  <data name="Authorization" xml:space="preserve">
+    <value>Autorización</value>
+  </data>
+  <data name="Birthdate" xml:space="preserve">
+    <value>Fecha de nacimiento</value>
+  </data>
+  <data name="Credentials" xml:space="preserve">
+    <value>Credenciales</value>
+  </data>
+  <data name="Credentials-fingerprint-first" xml:space="preserve">
+    <value>Huella digital como primera opción de acceso</value>
+  </data>
+  <data name="Credentials-fingerprint-second" xml:space="preserve">
+    <value>Huella digital como segunda opción de acceso</value>
+  </data>
+  <data name="Credentials-Iris-first" xml:space="preserve">
+    <value>Iris como primera opción de acceso</value>
+  </data>
+  <data name="Credentials-Iris-second" xml:space="preserve">
+    <value>Iris como segunda opción de acceso</value>
+  </data>
+  <data name="Department" xml:space="preserve">
+    <value>Departamento</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="Description-Coordinator" xml:space="preserve">
+    <value>El rol de Coordinador tendrá acceso a todos los proyectos dentro de su grupo correspondiente. Es responsable de la gestión de los proyectos, así como de la supervisión de los presupuestos y la administración del personal.</value>
+  </data>
+  <data name="Description-HumanResources" xml:space="preserve">
+    <value>El rol de Recursos Humanos tiene acceso a los datos del personal y a las herramientas administrativas en todos los grupos. Es responsable de gestionar el reclutamiento, administrar los registros de los empleados y apoyar el cumplimiento organizacional y las políticas del lugar de trabajo.</value>
+  </data>
+  <data name="Description-Professional" xml:space="preserve">
+    <value>El rol de Profesional se asigna a personas que trabajan en tareas específicas dentro de un proyecto. Tienen acceso únicamente a los proyectos en los que están directamente involucrados y son responsables de ejecutar el trabajo técnico y reportar el progreso al Coordinador.</value>
+  </data>
+  <data name="Employee" xml:space="preserve">
+    <value>Empleado</value>
+  </data>
+  <data name="Experience1-der-D1" xml:space="preserve">
+    <value>Certificado.</value>
+  </data>
+  <data name="Experience1-der-T1" xml:space="preserve">
+    <value>Metodología de investigación</value>
+  </data>
+  <data name="Experience1-izq-D1" xml:space="preserve">
+    <value>Gerente de proyectos en el Departamento de Investigación de Tesla.</value>
+  </data>
+  <data name="Experience2-der-D1" xml:space="preserve">
+    <value>Profesional certificado en gestión de proyectos con enfoque en proyectos aeroespaciales.</value>
+  </data>
+  <data name="Experience2-der-T1" xml:space="preserve">
+    <value>Certificación PMP</value>
+  </data>
+  <data name="Experience2-izq-D1" xml:space="preserve">
+    <value>Participó en el análisis de datos para la logística de una misión lunar.</value>
+  </data>
+  <data name="Experience3-der-D1" xml:space="preserve">
+    <value>Scrum Master certificado liderando equipos ágiles de producto.</value>
+  </data>
+  <data name="Experience3-der-T1" xml:space="preserve">
+    <value>Scrum Master</value>
+  </data>
+  <data name="Experience3-izq-D1" xml:space="preserve">
+    <value>Desarrolló y desplegó aplicaciones nativas en la nube utilizando herramientas de AWS.</value>
+  </data>
+  <data name="Experience4-der-D1" xml:space="preserve">
+    <value>Construyó entornos 3D inmersivos con Unreal Engine para entrenamiento mediante simulación.</value>
+  </data>
+  <data name="Experience4-der-T1" xml:space="preserve">
+    <value>Desarrollador Unreal Engine</value>
+  </data>
+  <data name="Experience4-izq-D1" xml:space="preserve">
+    <value>Completó el curso CS50 de Harvard, obteniendo una sólida base en ciencias de la computación.</value>
+  </data>
+  <data name="Experiments" xml:space="preserve">
+    <value>Experimentos</value>
+  </data>
+  <data name="Frozen" xml:space="preserve">
+    <value>Congelado</value>
+  </data>
+  <data name="Italian" xml:space="preserve">
+    <value>Italiano</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Apellido</value>
+  </data>
+  <data name="Launch" xml:space="preserve">
+    <value>Lanzamiento</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="Nationality" xml:space="preserve">
+    <value>Nacionalidad</value>
+  </data>
+  <data name="PerformanceEvaluation1-D1" xml:space="preserve">
+    <value>Adam demostró un fuerte pensamiento analítico y contribuyó significativamente en las sesiones de resolución de problemas del grupo.</value>
+  </data>
+  <data name="PerformanceEvaluation1-D2" xml:space="preserve">
+    <value>Adam obtuvo resultados sobresalientes en escenarios complejos, manteniendo constantemente un alto estándar de calidad.</value>
+  </data>
+  <data name="PerformanceEvaluation1-T1" xml:space="preserve">
+    <value>15/03/2024 Taller de Innovación Estratégica</value>
+  </data>
+  <data name="PerformanceEvaluation1-T2" xml:space="preserve">
+    <value>30/06/2023 Programa de Excelencia Técnica</value>
+  </data>
+  <data name="PerformanceEvaluation2-D1" xml:space="preserve">
+    <value>Edward participó activamente en las discusiones y demostró un enfoque maduro para manejar la dinámica del equipo.</value>
+  </data>
+  <data name="PerformanceEvaluation2-D2" xml:space="preserve">
+    <value>Edward aplicó eficazmente los principios ágiles, mostrando iniciativa y adaptabilidad en los ejercicios de liderazgo.</value>
+  </data>
+  <data name="PerformanceEvaluation2-T1" xml:space="preserve">
+    <value>05/09/2022 Seminario de Resolución de Conflictos</value>
+  </data>
+  <data name="PerformanceEvaluation2-T2" xml:space="preserve">
+    <value>18/11/2021 Curso de Liderazgo Ágil</value>
+  </data>
+  <data name="PerformanceEvaluation3-D1" xml:space="preserve">
+    <value>Clara utilizó métodos basados en evidencia para respaldar las decisiones estratégicas, mejorando el resultado general del proyecto.</value>
+  </data>
+  <data name="PerformanceEvaluation3-D2" xml:space="preserve">
+    <value>Clara mejoró la colaboración entre equipos mediante una comunicación clara, asertiva y empática.</value>
+  </data>
+  <data name="PerformanceEvaluation3-T1" xml:space="preserve">
+    <value>12/08/2023 Toma de Decisiones Basada en Datos</value>
+  </data>
+  <data name="PerformanceEvaluation3-T2" xml:space="preserve">
+    <value>07/04/2022 Habilidades de Comunicación Avanzada</value>
+  </data>
+  <data name="PerformanceEvaluation4-D1" xml:space="preserve">
+    <value>Jack dominó los patrones arquitectónicos y demostró la capacidad de diseñar sistemas escalables y seguros.</value>
+  </data>
+  <data name="PerformanceEvaluation4-D2" xml:space="preserve">
+    <value>Jack lideró la implementación de pipelines CI/CD, optimizando los procesos de despliegue y minimizando el tiempo de inactividad.</value>
+  </data>
+  <data name="PerformanceEvaluation4-T1" xml:space="preserve">
+    <value>10/10/2024 Certificación en Arquitectura en la Nube</value>
+  </data>
+  <data name="PerformanceEvaluation4-T2" xml:space="preserve">
+    <value>22/01/2023 Laboratorio de Integración DevOps</value>
+  </data>
+  <data name="PerformanceEvaluations" xml:space="preserve">
+    <value>Evaluaciones de Desempeño</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>Número de Teléfono</value>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>Puesto</value>
+  </data>
+  <data name="Projects1-der-D1" xml:space="preserve">
+    <value>Diseñó un marco descentralizado de IA para la coordinación de enjambres de drones.</value>
+  </data>
+  <data name="Projects1-izq-D1" xml:space="preserve">
+    <value>Proyecto del laboratorio de sistemas autónomos.</value>
+  </data>
+  <data name="Projects2-der-D1" xml:space="preserve">
+    <value>Prototipo de escudos de energía adaptativos utilizando nanomateriales reactivos.</value>
+  </data>
+  <data name="Projects2-izq-D1" xml:space="preserve">
+    <value>Proyecto del departamento de experimentos.</value>
+  </data>
+  <data name="Projects3-der-D1" xml:space="preserve">
+    <value>Creó un planificador de trayectorias asistido por IA para sondas interestelares.</value>
+  </data>
+  <data name="Projects3-izq-D1" xml:space="preserve">
+    <value>Proyecto del laboratorio de navegación en el espacio profundo.</value>
+  </data>
+  <data name="Projects4-der-D1" xml:space="preserve">
+    <value>Desarrolló un sistema de entrada neuronal para controlar dispositivos mediante patrones de ondas cerebrales.</value>
+  </data>
+  <data name="Projects4-izq-D1" xml:space="preserve">
+    <value>Proyecto de la unidad de interfaz humano-computadora</value>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>Rol</value>
+  </data>
+  <data name="Role-Coordinator" xml:space="preserve">
+    <value>Coordinador</value>
+  </data>
+  <data name="Role-HumanResources" xml:space="preserve">
+    <value>Recursos Humanos</value>
+  </data>
+  <data name="Role-Professional" xml:space="preserve">
+    <value>Profesional</value>
+  </data>
+  <data name="SecurityAccess" xml:space="preserve">
+    <value>Seguridad y acceso</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="Unfrozen" xml:space="preserve">
+    <value>Descongelado</value>
+  </data>
+  <data name="WorkHistory" xml:space="preserve">
+    <value>Historial laboral</value>
+  </data>
+</root>

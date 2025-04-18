@@ -1,0 +1,909 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using NASAWebPrototype.Models;
+@inject IViewLocalizer Localizer
+@model EmployeeInformationModel
+@{
+    ViewData["Title"] = "EmployeeInformation";
+}
+
+
+
+
+
+<style>
+    .list-group-horizontal .list-group-item {
+    flex: 1;
+    /* Que todos ocupen el mismo ancho */
+    display: flex;
+    align-items: center;
+    /* Centra verticalmente */
+    justify-content: center;
+    /* Opcional: centra horizontalmente */
+    height: 60px;
+    /* Altura fija para todos los ítems */
+    padding: 0.5rem;
+    /* Ajuste de padding si hace falta */
+    border: 1px solid #bdbdbd;
+    border-radius: 0 !important;
+    }
+
+    .nav-item {
+    border: 1px solid #bdbdbd;
+    }
+
+    .nav-link {
+    color: black;
+    }
+
+    .nav-link:visited,
+    .nav-link:active,
+    .nav-link:focus,
+    .nav-link:hover {
+    color: black;
+    text-decoration: none;
+    /* opcional, para quitar subrayado */
+    }
+
+    .nav-link:focus {
+    background-color: #bdbdbd;
+    }
+
+    .list-group-horizontal .list-group-item button {
+    height: 36px;
+    /* Ajusta el botón si se ve muy alto */
+    }
+
+    .info-block p {
+    margin-bottom: 40px;
+    /* o 1rem, como prefieras */
+    }
+
+    .custom.nav-link.active {
+    background-color: #bdbdbd;
+    color: black;
+    display: block;
+    /* <-- importante para que el fondo cubra todo */
+    }
+
+    .card-body {
+    padding: 0;
+    }
+
+    #internCard {
+    width: 250px;
+    height: 200px;
+    margin: 5px;
+    }
+
+    #imgCard {
+    margin-top: 15px;
+    margin-left: 15px;
+    }
+</style>
+
+
+
+
+<br>
+<br>
+
+
+<!-- Fila 1 -->
+<div class="row justify-content-center mb-6 ">
+    <!-- col 1 -->
+
+    <div class="col-md-10 text-start mx-0 px-0">
+        <ul class="nav">
+            <li class="nav-item bord">
+                <a class="nav-link" id="employee-link"
+                   href="@Url.Action("EmployeeInformation", "HumanResources", new { section = "Employee" })">
+                @Localizer["Employee"]</a>
+
+            </li>
+            <li class="nav-item board">
+
+                <a class="nav-link" id="workhistory-link" 
+                href="@Url.Action("EmployeeInformation", "HumanResources", new { section = "WorkHistory" })">
+                @Localizer["WorkHistory"]</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="securityaccess-link"
+                   href="@Url.Action("EmployeeInformation", "HumanResources", new { section = "SecurityAccess" })">
+                @Localizer["SecurityAccess"]</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="performanceevaluations-link"
+                   href="@Url.Action("EmployeeInformation", "HumanResources", new { section = "PerformanceEvaluations" })">
+                @Localizer["PerformanceEvaluations"]</a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+
+
+
+
+<!-- Fila 2 -->
+<div class="row justify-content-center">
+    <!-- col 1 -->
+    <div class="col-md-10 justify-content-center mx-0 px-0">
+        <div class="card">
+            <div class="card-body">
+
+                <div class="section" id="Employee">
+
+                    <div class="row mx-1">
+
+                        <div class="col-md-6">
+                            <br>
+
+                            @{
+
+                                switch (Model.IdEmployee) {
+
+                                    case 1:
+
+
+                                        <div class="info-block" style="margin-left: 20px;">
+                                            <p><strong>ID: </strong>#001</p>
+                                            <p><strong>@Localizer["Name"]: </strong>Adam</p>
+                                            <p><strong>@Localizer["LastName"]: </strong>Smith</p>
+                                            <p><strong>@Localizer["Birthdate"]: </strong>03/06/1998</p>
+                                            <p><strong>@Localizer["Nationality"]: </strong>@Localizer["American"]</p>
+                                        </div>
+
+                                        break;
+
+                                    case 2:
+
+                                        <div class="info-block" style="margin-left: 20px;">
+                                            <p><strong>ID: </strong>#002</p>
+                                            <p><strong>@Localizer["Name"]: </strong>Edward</p>
+                                            <p><strong>@Localizer["LastName"]: </strong>James</p>
+                                            <p><strong>@Localizer["Birthdate"]: </strong>03/06/1999</p>
+                                            <p><strong>@Localizer["Nationality"]: </strong>@Localizer["American"]</p>
+                                        </div>
+                                        break;
+
+                                    case 3:
+
+
+                                        <div class="info-block" style="margin-left: 20px;">
+                                            <p><strong>ID: </strong>#002</p>
+                                            <p><strong>@Localizer["Name"]: </strong>Clara</p>
+                                            <p><strong>@Localizer["LastName"]: </strong>David</p>
+                                            <p><strong>@Localizer["Birthdate"]: </strong>03/06/1995</p>
+                                            <p><strong>@Localizer["Nationality"]: </strong>@Localizer["Italian"]</p>
+                                        </div>
+
+                                        break;
+
+                                    case 4:
+
+
+                                        <div class="info-block" style="margin-left: 20px;">
+                                            <p><strong>ID: </strong>#002</p>
+                                            <p><strong>@Localizer["Name"]: </strong>Jack</p>
+                                            <p><strong>@Localizer["LastName"]: </strong>Adam</p>
+                                            <p><strong>@Localizer["Birthdate"]: </strong>03/06/1997</p>
+                                            <p><strong>@Localizer["Nationality"]: </strong>@Localizer["American"]</p>
+                                        </div>
+
+                                        break;
+
+                                    default:
+
+                                        break;
+
+                                }
+
+                            }
+
+                        </div>
+
+
+                        <div class="col-md-6">
+                            <br>
+                            @{
+
+                                switch (Model.IdEmployee)
+
+                                {
+
+                                    case 1:
+
+                                        <div class="info-block">
+                                            <p><strong>@Localizer["PhoneNumber"]: </strong>+91 98765 43210</p>
+                                            <p><strong>@Localizer["Address"]: </strong>3860 NW 125th St</p>
+                                            <p><strong>@Localizer["Position"]: </strong>@Localizer["Role-Coordinator"]</p>
+                                            <p><strong>@Localizer["Department"]: </strong>@Localizer["Experiments"]</p>
+                                            <p><strong>@Localizer["Status"]: </strong>@Localizer["Unfrozen"]</p>
+                                        </div>
+
+                                        break;
+                                    case 2:
+
+                                        <div class="info-block">
+                                            <p><strong>@Localizer["PhoneNumber"]: </strong>+91 93745 13518</p>
+                                            <p><strong>@Localizer["Address"]: </strong>3543 NW 157th St</p>
+                                            <p><strong>@Localizer["Position"]: </strong>@Localizer["Role-Professional"]</p>
+                                            <p><strong>@Localizer["Department"]: </strong>@Localizer["Launch"]</p>
+                                            <p><strong>@Localizer["Status"]: </strong>@Localizer["Unfrozen"]</p>
+                                        </div>
+
+                                        break;
+
+                                    case 3:
+
+                                        <div class="info-block">
+                                            <p><strong>@Localizer["PhoneNumber"]: </strong>+91 91264 19253</p>
+                                            <p><strong>@Localizer["Address"]: </strong>7583 NW 100th St</p>
+                                            <p><strong>@Localizer["Position"]: </strong>@Localizer["Role-Coordinator"]</p>
+                                            <p><strong>@Localizer["Department"]: </strong>@Localizer["Experiments"]</p>
+                                            <p><strong>@Localizer["Status"]: </strong>@Localizer["Frozen"]</p>
+                                        </div>
+
+                                        break;
+
+                                    case 4:
+
+                                        <div class="info-block">
+                                            <p><strong>@Localizer["PhoneNumber"]: </strong>+91 78965 74210</p>
+                                            <p><strong>@Localizer["Address"]: </strong>3261 NW 345th St</p>
+                                            <p><strong>@Localizer["Position"]: </strong>@Localizer["Role-HumanResources"]</p>
+                                            <p><strong>@Localizer["Department"]: </strong>@Localizer["Role-HumanResources"]</p>
+                                            <p><strong>@Localizer["Status"]: </strong>@Localizer["Unfrozen"]</p>
+                                        </div>
+
+                                        break;
+                                    default:
+
+                                        break;
+
+
+                                }
+
+                            }
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- vista de WorkHistory -->
+                <div class="section d-none" id="WorkHistory">
+
+                    <div class="row  mx-1">
+                        <!-- Titulo y cosas de la izq -->
+                        <div class="col-md-6 text-center " style="border-right:2px solid #bdbdbd;">
+                            <br>
+                            <h5><strong>Experience and certifications</strong></h5>
+                            <br>
+
+                            <div class="row text-center">
+
+                                <div class="col-md-6 d-flex justify-content-center">
+                                    <div class="card" id="internCard">
+                                        <div class="card-body">
+
+                                            @{
+
+
+                                                switch (Model.IdEmployee)
+                                                {
+
+                                                    case 1:
+                                                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" id="imgCard" alt="asd" width="24" height="24" class="">
+                                                        <h5 class="card-title ">Tesla</h5>
+                                                        <p class="card-text ">@Localizer["Experience1-izq-D1"]</p>
+
+                                                    break;
+
+                                                    case 2:
+                                                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" id="imgCard" alt="asd" width="24" height="24" class="">
+                                                        <h5 class="card-title ">NASA</h5>
+                                                        <p class="card-text ">@Localizer["Experience2-izq-D1"].</p>
+
+                                                    break;
+
+                                                    case 3:
+                                                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" id="imgCard" alt="asd" width="24" height="24" class="">
+                                                        <h5 class="card-title ">Amazon Web Services</h5>
+                                                        <p class="card-text ">@Localizer["Experience3-izq-D1"]</p>
+
+                                                    break;
+
+                                                    case 4:
+                                                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" id="imgCard" alt="asd" width="24" height="24" class="">
+                                                        <h5 class="card-title ">Harvard CS50</h5>
+                                                        <p class="card-text ">@Localizer["Experience2-izq-D1"]</p>
+
+                                                    break;
+
+                                                }
+
+                                            
+                                            }
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 d-flex justify-content-center">
+                                    <div class="card" id="internCard">
+                                        <div class="card-body">
+
+                                            @{
+
+
+                                                switch (Model.IdEmployee)
+                                                {
+
+                                                    case 1:
+                                                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" id="imgCard" alt="asd" width="24" height="24" class="">
+                                                        <h5 class="card-title ">@Localizer["Experience1-der-T1"]</h5>
+                                                        <p class="card-text ">@Localizer["Experience1-der-D1"]</p>
+
+                                                        break;
+
+                                                    case 2:
+                                                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" id="imgCard" alt="asd" width="24" height="24" class="">
+                                                        <h5 class="card-title ">@Localizer["Experience2-der-T1"]</h5>
+                                                        <p class="card-text ">@Localizer["Experience2-der-D1"]</p>
+
+                                                        break;
+
+                                                    case 3:
+                                                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" id="imgCard" alt="asd" width="24" height="24" class="">
+                                                        <h5 class="card-title ">@Localizer["Experience3-der-T1"]</h5>
+                                                        <p class="card-text ">@Localizer["Experience3-der-D1"]</p>
+
+                                                        break;
+
+                                                    case 4:
+                                                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" id="imgCard" alt="asd" width="24" height="24" class="">
+                                                        <h5 class="card-title ">@Localizer["Experience4-der-T1"]</h5>
+                                                        <p class="card-text ">@Localizer["Experience4-der-D1"]</p>
+
+                                                        break;
+
+                                                }
+
+
+                                            }
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h1></h1> <h1></h1> <h1></h1>
+                            </div>
+                        </div>
+
+                        <!-- Titulo y cosas de la Der -->
+                        <div class="col-md-6 text-center bg-dasrk">
+                            <br>
+                            <h5><strong>Projects</strong></h5>
+                            <br>
+                            <div class="row text-center">
+
+                                <div class="col-md-6 d-flex justify-content-center">
+                                    <div class="card" id="internCard">
+                                        <div class="card-body">
+
+                                            @{
+
+
+                                                switch (Model.IdEmployee)
+                                                {
+
+                                                    case 1:
+
+                                                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="asd" width="24" height="24">
+                                                        <h5 class="card-title">Zeta-9</h5>
+                                                        <p class="card-text">@Localizer["Projects1-izq-D1"]</p>
+
+
+                                                    break;
+
+                                                    case 2:
+
+                                                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="asd" width="24" height="24">
+                                                        <h5 class="card-title">X/43</h5>
+                                                        <p class="card-text">@Localizer["Projects2-izq-D1"]</p>
+
+                                                        break;
+
+                                                    case 3:
+
+                                                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="asd" width="24" height="24">
+                                                        <h5 class="card-title">Omega-7</h5>
+                                                        <p class="card-text">@Localizer["Projects3-izq-D1"]</p>
+
+                                                        break;
+
+                                                    case 4:
+
+                                                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="asd" width="24" height="24">
+                                                        <h5 class="card-title">Rift/12</h5>
+                                                        <p class="card-text">@Localizer["Projects4-izq-D1"]</p>
+
+                                                        break;
+
+                                                }
+
+
+                                            }
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 d-flex justify-content-center">
+                                    <div class="card" id="internCard">
+                                        <div class="card-body">
+
+                                            @{
+
+
+                                                switch (Model.IdEmployee)
+                                                {
+
+                                                    case 1:
+
+                                                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="asd" width="24" height="24">
+                                                        <h5 class="card-title">EchoGrid</h5>
+                                                        <p class="card-text">@Localizer["Projects1-der-D1"]</p>
+
+
+                                                        break;
+
+                                                    case 2:
+
+                                                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="asd" width="24" height="24">
+                                                        <h5 class="card-title">GU-87</h5>
+                                                        <p class="card-text">@Localizer["Projects2-der-D1"]</p>
+
+
+                                                        break;
+
+                                                    case 3:
+
+                                                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="asd" width="24" height="24">
+                                                        <h5 class="card-title">Polaris</h5>
+                                                        <p class="card-text">@Localizer["Projects3-der-D1"]</p>
+
+                                                        break;
+
+                                                    case 4:
+
+                                                        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="asd" width="24" height="24">
+                                                        <h5 class="card-title">NIP/23</h5>
+                                                        <p class="card-text">@Localizer["Projects4-der-D1"]</p>
+
+                                                        break;
+
+                                                }
+
+
+                                            }
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h1></h1> <h1></h1> <h1></h1>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+
+
+                <div class="section d-none" id="SecurityAccess">
+
+                    <div class="row  mx-1">
+                        <!-- Titulo y cosas de la izq -->
+                        <div class="col-md-6 text-center" style="border-right:2px solid #bdbdbd;">
+                            <br>
+                            <h5><strong>@Localizer["Authorization"]</strong></h5>
+                            <br>
+
+                            <div class="row text-center ">
+
+                                <div class="col-md-4 d-flex justify-content-center">
+                                    <p><Strong>@Localizer["Role"]:</Strong></p>
+                                </div>
+
+
+                                <div class="col-md-8 d-flex">
+
+
+                                    @{
+
+
+                                        switch (Model.IdEmployee)
+                                        {
+
+                                            case 1:
+                                                <p>@Localizer["Role-Coordinator"]</p>
+                                                break;
+
+                                            case 2:
+                                                <p>@Localizer["Role-Professional"]</p>
+                                                break;
+
+                                            case 3:
+                                                <p>@Localizer["Role-Coordinator"]</p>
+                                                break;
+
+                                            case 4:
+                                                <p>@Localizer["Role-HumanResources"]</p>
+                                                break;
+
+                                        }
+
+
+                                    }
+
+
+                                   
+                                </div>
+
+                                <h1></h1> <h1></h1> <h1></h1>
+                            </div>
+
+                            <div class="row text-center ">
+
+                                <div class="col-md-4 d-flex justify-content-center">
+                                    <p><Strong>@Localizer["Description"]:</Strong></p>
+                                </div>
+
+
+                                <div class="col-md-8 d-flex" style="text-align: start;">
+
+                                    @{
+
+
+                                        switch (Model.IdEmployee)
+                                        {
+
+                                            case 1:
+                                                <p>@Localizer["Description-Coordinator"]</p>
+                                                break;
+
+                                            case 2:
+                                                <p>@Localizer["Description-Professional"]</p>
+
+                                                break;
+
+                                            case 3:
+                                                <p>@Localizer["Description-Coordinator"]</p>
+                                                break;
+
+                                            case 4:
+                                                <p>@Localizer["Description-HumanResources"]</p>
+
+                                                break;
+
+                                        }
+
+
+                                    }
+
+                                   
+                                </div>
+
+                                <h1></h1> <h1></h1> <h1></h1>
+                            </div>
+
+
+
+
+
+                        </div>
+
+                        <!-- Titulo y cosas de la Der -->
+                        <div class="col-md-6 text-center">
+                            <br>
+                            <h5><strong>@Localizer["Credentials"]</strong></h5>
+                            <br>
+
+                            <div class="row text-center mx-3">
+
+                                <div class="col-md-12 d-flex justify-content-center align-items gap-2 mb-5">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png"  alt="asd" width="48" height="48">
+
+                                    @{
+
+
+                                        switch (Model.IdEmployee)
+                                        {
+
+                                            case 1:
+                                                <p class="mb-0"> @Localizer["Credentials-Iris-first"]  </p>
+                                                break;
+
+                                            case 2:
+                                                <p class="mb-0">@Localizer["Credentials-Iris-second"].</p>
+                                                break;
+
+                                            case 3:
+                                                <p class="mb-0">@Localizer["Credentials-Iris-second"]</p>
+                                                break;
+
+                                            case 4:
+                                                <p class="mb-0">@Localizer["Credentials-Iris-first"]</p>
+                                                break;
+
+                                        }
+
+
+                                    }
+
+
+                                    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="asd" width="48" height="48">
+                                </div>
+
+                                <div class="col-md-12 d-flex justify-content-center align-items gap-2 mb-5">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="asd" width="48" height="48">
+
+                                    @{
+
+
+                                        switch (Model.IdEmployee)
+                                        {
+
+                                            case 1:
+                                                <p class="mb-0">@Localizer["Credentials-fingerprint-second"]</p>
+                                                break;
+
+                                            case 2:
+                                                <p class="mb-0">@Localizer["Credentials-fingerprint-first"]</p>
+                                                break;
+
+                                            case 3:
+                                                <p class="mb-0">@Localizer["Credentials-fingerprint-first"]</p>
+                                                break;
+
+                                            case 4:
+                                                <p class="mb-0">@Localizer["Credentials-fingerprint-second"]</p>
+                                                break;
+
+                                        }
+
+
+                                    }
+
+                                    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="asd" width="48" height="48">
+                                </div>
+
+                                <h1></h1> <h1></h1> <h1></h1>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="section d-none" id="PerformanceEvaluations">
+
+                    <div class="row justify-content-center mx-1">
+                        <div class="col-md-8">
+                            <div class="card my-5">
+
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mx-1">
+
+                                        <br>
+                                        <div class="col-md-2 d-flex justify-content-center">
+                                            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="asd" width="72" height="72">
+
+                                        </div>
+                                        <div class="col-md-10 m-2">
+
+                                            @{
+
+
+                                                switch (Model.IdEmployee)
+                                                {
+
+                                                    case 1:
+                                                        <p><strong>@Localizer["PerformanceEvaluation1-T1"]</strong></p>
+                                                        <p>@Localizer["PerformanceEvaluation1-D1"]</p>
+                                                        break;
+
+                                                    case 2:
+                                                        <p><strong>@Localizer["PerformanceEvaluation2-T1"]</strong></p>
+                                                        <p>@Localizer["PerformanceEvaluation2-D1"]</p>
+                                                        break;
+
+                                                    case 3:
+                                                        <p><strong>@Localizer["PerformanceEvaluation3-T1"]</strong></p>
+                                                        <p>@Localizer["PerformanceEvaluation3-D1"]</p>
+                                                        break;
+
+                                                    case 4:
+                                                        <p><strong>@Localizer["PerformanceEvaluation4-T1"]</strong></p>
+                                                        <p>@Localizer["PerformanceEvaluation4-D1"]</p>
+                                                        break;
+
+                                                }
+
+
+                                            }
+
+
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="row justify-content-center mx-1">
+                        <div class="col-md-8">
+                            <div class="card my-5">
+
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mx-1">
+
+                                        <br>
+                                        <div class="col-md-2 d-flex justify-content-center">
+                                            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="asd" width="72" height="72">
+
+                                        </div>
+                                        <div class="col-md-10  m-2">
+                                            @{
+
+
+                                                switch (Model.IdEmployee)
+                                                {
+
+                                                    case 1:
+                                                        <p><strong>@Localizer["PerformanceEvaluation1-T2"]</strong></p>
+                                                        <p>@Localizer["PerformanceEvaluation1-D2"]</p>
+                                                        break;
+
+                                                    case 2:
+                                                        <p><strong>@Localizer["PerformanceEvaluation2-T2"]</strong></p>
+                                                        <p>@Localizer["PerformanceEvaluation2-D2"]</p>
+                                                        break;
+
+                                                    case 3:
+                                                        <p><strong>@Localizer["PerformanceEvaluation3-T2"]</strong></p>
+                                                        <p>@Localizer["PerformanceEvaluation3-D2"]</p>
+                                                        break;
+
+                                                    case 4:
+                                                        <p><strong>@Localizer["PerformanceEvaluation4-T2"]</strong></p>
+                                                        <p>@Localizer["PerformanceEvaluation4-D2"]</p>
+                                                        break;
+
+                                                }
+
+
+                                            }
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Obtener el parámetro "section" de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const section = urlParams.get('section'); // Ejemplo: 'Employee'
+
+
+           if (!section) {
+        section = "Employee";
+        // Redirige a la URL con la sección predeterminada para evitar URL vacía
+        window.history.replaceState(null, '', `?section=${section}`);
+        
+    }
+
+        // Mostrar la sección correspondiente
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(function(sectionDiv) {
+            if (sectionDiv.id === section) {
+                sectionDiv.classList.remove('d-none');
+            } else {
+                sectionDiv.classList.add('d-none');
+            }
+        });
+
+       
+
+           if (section === "Employee") {
+        document.getElementById('employee-link').classList.add('active');
+        document.getElementById('employee-link').style.backgroundColor = '#bdbdbd';
+        document.getElementById('employee-link').style.color = 'black';
+        document.getElementById('employee-link').style.display = 'block';
+    } else {
+        document.getElementById('employee-link').classList.remove('active');
+        document.getElementById('employee-link').style.backgroundColor = '';
+        document.getElementById('employee-link').style.color = '';
+        document.getElementById('employee-link').style.display = '';
+    }
+
+    if (section === "WorkHistory") {
+        document.getElementById('workhistory-link').classList.add('active');
+        document.getElementById('workhistory-link').style.backgroundColor = '#bdbdbd';
+        document.getElementById('workhistory-link').style.color = 'black';
+        document.getElementById('workhistory-link').style.display = 'block';
+    } else {
+        document.getElementById('workhistory-link').classList.remove('active');
+        document.getElementById('workhistory-link').style.backgroundColor = '';
+        document.getElementById('workhistory-link').style.color = '';
+        document.getElementById('workhistory-link').style.display = '';
+    }
+
+    if (section === "SecurityAccess") {
+        document.getElementById('securityaccess-link').classList.add('active');
+        document.getElementById('securityaccess-link').style.backgroundColor = '#bdbdbd';
+        document.getElementById('securityaccess-link').style.color = 'black';
+        document.getElementById('securityaccess-link').style.display = 'block';
+    } else {
+        document.getElementById('securityaccess-link').classList.remove('active');
+        document.getElementById('securityaccess-link').style.backgroundColor = '';
+        document.getElementById('securityaccess-link').style.color = '';
+        document.getElementById('securityaccess-link').style.display = '';
+    }
+
+    if (section === "PerformanceEvaluations") {
+        document.getElementById('performanceevaluations-link').classList.add('active');
+        document.getElementById('performanceevaluations-link').style.backgroundColor = '#bdbdbd';
+        document.getElementById('performanceevaluations-link').style.color = 'black';
+        document.getElementById('performanceevaluations-link').style.display = 'block';
+    } else {
+        document.getElementById('performanceevaluations-link').classList.remove('active');
+        document.getElementById('performanceevaluations-link').style.backgroundColor = '';
+        document.getElementById('performanceevaluations-link').style.color = '';
+        document.getElementById('performanceevaluations-link').style.display = '';
+    }
+
+
+
+    });
+</script>
+
+
+
