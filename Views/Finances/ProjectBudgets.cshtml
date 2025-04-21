@@ -1,0 +1,434 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@{
+    ViewData["Title"] = Localizer["ManageBudget"];
+}
+<style>
+    /* Estilos comunes */
+    .back-button {
+        border: 1px solid #e60000;
+        color: #e60000;
+        background-color: transparent;
+        padding: 8px 20px;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+
+        .back-button:hover {
+            background-color: #e60000;
+            color: white;
+        }
+
+    .add-button {
+        background-color: #0033a0;
+        color: white;
+        border: none;
+        padding: 8px 20px;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+
+        .add-button:hover {
+            background-color: #00257a;
+        }
+
+    .search-container {
+        position: relative;
+        width: 100%;
+    }
+
+    .search-input {
+        width: 100%;
+        padding: 8px 15px;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        padding-left: 35px;
+    }
+
+    .search-icon {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #6c757d;
+    }
+
+    .project-list {
+        padding: 15px;
+        margin-top: 20px;
+    }
+
+    .project-item {
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .project-logo {
+        max-width: 160px;
+        max-height: 200px;
+        object-fit: contain;
+        border-radius: 4px;
+    }
+
+    .logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 150px;
+        padding: 15px;
+    }
+
+    .project-title {
+        font-weight: bold;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .description-box {
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        padding: 12px;
+        height: 75px;
+        overflow: auto;
+        width: 175px;
+        background-color: #f8f9fa;
+    }
+
+    .users-table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+        .users-table tr {
+            border-bottom: 1px solid #dee2e6;
+        }
+
+            .users-table tr:last-child {
+                border-bottom: none;
+            }
+
+        .users-table td {
+            padding: 8px;
+            text-align: center;
+            border-right: 1px solid #dee2e6;
+        }
+
+            .users-table td:last-child {
+                border-right: none;
+            }
+
+    .budget-input {
+        width: 100%;
+        padding: 6px 12px;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+    }
+
+    .select-button {
+        background-color: #0033a0;
+        color: white;
+        border: none;
+        padding: 8px 20px;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        width: auto;
+    }
+
+        .select-button:hover {
+            background-color: #00257a;
+        }
+
+    .filters-icon {
+        cursor: pointer;
+        margin-left: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 38px;
+        width: 38px;
+    }
+
+    .project-info {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 15px;
+        flex-wrap: wrap;
+    }
+
+    .project-info-item {
+        display: flex;
+        align-items: center;
+        padding: 6px 12px;
+        border-radius: 4px;
+        border: 1px;
+    }
+
+        .project-info-item i, .project-info-item img {
+            margin-right: 8px;
+        }
+
+    .users-section h6, .budget-section h6 {
+        margin-bottom: 10px;
+    }
+
+    .main-header {
+        background-color: #000;
+        color: white;
+        padding: 10px 0;
+    }
+
+    .nasa-logo {
+        height: 70px;
+    }
+
+    .header-right {
+        display: flex;
+        align-items: center;
+    }
+
+    .language-selector {
+        margin-right: 15px;
+    }
+
+    .user-section {
+        margin-right: 10px;
+    }
+
+    .budget-section input {
+        height: 38px;
+    }
+
+    .content-row {
+        display: flex;
+        align-items: center;
+        margin-top: 15px;
+        justify-content: flex-start;
+        gap: 25px;
+    }
+
+    .content-section {
+        padding: 5px;
+    }
+
+    .image-item {
+        width: 15px;
+        height: 15px;
+        object-fit: contain;
+    }
+    
+    .project-main-content {
+        padding-left: 15px;
+    }
+</style>
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">@Localizer["Projects Budgets"]</h1>  
+    <button class="back-button me-auto" onclick="window.history.back()" style="float: left;">
+        @Localizer["Back"]
+    </button>
+    <div class="d-flex justify-content-start align-items-center mb-4">
+        
+
+           <div class="d-flex justify-content-center align-items-center w-50 mx-auto">  
+               <div class="search-container me-2">  
+                   <i class="fas fa-search search-icon"></i>  
+                   <input type="text" class="search-input" placeholder="@Localizer["Search Project"]">  
+               </div>  
+               <div class="filters-icon">  
+                   <i class="fas fa-sliders-h fa-lg"></i>  
+               </div>  
+           </div>
+       </div>
+
+    <h2 class="mb-4 text-center">@Localizer["Last projects"]</h2>  
+
+    <div class="row">  
+        <!-- Column 1 -->  
+        <div class="col-md-6">  
+            <div class="project-list">  
+                <div class="project-item">  
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="logo-container">
+                                <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/M4930d20707ffa2916c7ab55686a046fd1743121303544" class="project-logo" alt="Project Apollo">  
+                            </div>  
+                        </div>  
+
+                        <div class="col-md-9 project-main-content">  
+                            <div class="row">  
+                                <div class="col-md-12">  
+                                    <div class="project-info">  
+                                        <div class="project-info-item">
+                                            <img class="image-item" src="~/images/calendar.png" alt="Calendar" /> ##/##/##
+                                        </div>  
+                                        <div class="project-info-item">
+                                            <img src="~/images/label.png" alt="Type" class="image-item" />@Localizer["Category"]
+                                        </div>  
+                                        <div class="project-info-item">
+                                            <i class="fas bi-person-circle"></i>@Localizer["User"]
+                                        </div>  
+                                    </div>  
+                                </div>  
+                            </div>
+
+                            <div class="content-row">
+                                <div class="content-section">
+                                    <div class="description-box">@Localizer["Description"]</div>
+                                </div>
+
+                                <div class="content-section">
+                                    <div class="budget-section">
+                                        <button class="select-button" onclick="window.location.href='/Finances/AddBudget1'">
+                                            @Localizer["Select"]
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>  
+                </div>  
+
+                <div class="project-item">  
+                    <div class="row">  
+                        <div class="col-md-3">  
+                            <div class="logo-container">
+                                <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/M6f4739011b700ec0231cc2846b0d00981743121522253" class="project-logo" alt="Project Gemini">
+                            </div>  
+                        </div>  
+
+                        <div class="col-md-9 project-main-content">  
+                            <div class="row">  
+                                <div class="col-md-12">  
+                                    <div class="project-info">  
+                                        <div class="project-info-item">
+                                            <img src="~/images/calendar.png" alt="Calendar" class="image-item" /> ##/##/##
+                                        </div>  
+                                        <div class="project-info-item">
+                                            <img src="~/images/label.png" alt="Type" class="image-item" />@Localizer["Category"]
+                                        </div>  
+                                        <div class="project-info-item">
+                                            <i class="fas bi-person-circle"></i>@Localizer["User"]
+                                        </div>  
+                                    </div>  
+                                </div>  
+                            </div>  
+
+                            <div class="content-row">
+                                <div class="content-section">
+                                    <div class="description-box">@Localizer["Description"]</div>  
+                                </div>  
+
+                                <div class="content-section">  
+                                    <div class="budget-section">
+                                        <button class="select-button" onclick="window.location.href='/Finances/AddBudget2'">
+                                            @Localizer["Select"]  
+                                        </button>  
+                                    </div>  
+                                </div>  
+                            </div>  
+                        </div>  
+                    </div>  
+                </div>  
+            </div>  
+        </div>  
+
+        <!-- Column 2 -->  
+        <div class="col-md-6">  
+            <div class="project-list">  
+                <div class="project-item">  
+                    <div class="row">  
+                        <div class="col-md-3">  
+                            <div class="logo-container">
+                                <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/M1e6baf76a9d3d7921a10fcd6972b807f1743121477242" class="project-logo" alt="Project Apollo">
+                            </div>  
+                        </div>  
+
+                        <div class="col-md-9 project-main-content">  
+                            <div class="row">  
+                                <div class="col-md-12">  
+                                    <div class="project-info">  
+                                        <div class="project-info-item">
+                                            <img class="image-item" src="~/images/calendar.png" alt="Calendar" /> ##/##/##
+                                        </div>  
+                                        <div class="project-info-item">
+                                            <img src="~/images/label.png" alt="Type" class="image-item" />@Localizer["Category"]
+                                        </div>  
+                                        <div class="project-info-item">
+                                            <i class="fas bi-person-circle"></i>@Localizer["User"]
+                                        </div>  
+                                    </div>  
+                                </div>  
+                            </div>  
+
+                            <div class="content-row">
+                                <div class="content-section">
+                                    <div class="description-box">@Localizer["Description"]</div>  
+                                </div>  
+
+                                <div class="content-section">  
+                                    <div class="budget-section">
+                                        <button class="select-button" onclick="window.location.href='/Finances/AddBudget3'">
+                                            @Localizer["Select"]  
+                                        </button>  
+                                    </div>  
+                                </div>  
+                            </div>  
+                        </div>  
+                    </div>  
+                </div>  
+
+                <div class="project-item">  
+                    <div class="row">  
+                        <div class="col-md-3">  
+                            <div class="logo-container">
+                                <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/M4a44f7313f9cd7b57babd798515518091743121598961" class="project-logo" alt="Project Gemini"> 
+                            </div>  
+                        </div>  
+
+                        <div class="col-md-9 project-main-content">  
+                            <div class="row">  
+                                <div class="col-md-12">  
+                                    <div class="project-info">  
+                                        <div class="project-info-item">
+                                            <img src="~/images/calendar.png" alt="Calendar" class="image-item" /> ##/##/##
+                                        </div>  
+                                        <div class="project-info-item">
+                                            <img src="~/images/label.png" alt="Type" class="image-item" />@Localizer["Category"]
+                                        </div>  
+                                        <div class="project-info-item">
+                                            <i class="fas bi-person-circle"></i>@Localizer["User"]
+                                        </div>  
+                                    </div>  
+                                </div>  
+                            </div>  
+
+                            <div class="content-row">
+                                <div class="content-section">
+                                    <div class="description-box">@Localizer["Description"]</div>  
+                                </div>  
+
+                                <div class="content-section">  
+                                    <div class="budget-section">
+                                        <button class="select-button" onclick="window.location.href='/Finances/AddBudget4'">
+                                            @Localizer["Select"]  
+                                        </button>  
+                                    </div>  
+                                </div>  
+                            </div>  
+                        </div>  
+                    </div>  
+                </div>  
+            </div>  
+        </div>  
+    </div>  
+</div>

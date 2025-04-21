@@ -1,0 +1,114 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@{
+    ViewData["Title"] = Localizer["FinancesTitle"];
+}
+
+<style>
+    .mission-card {
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+        height: 300px;
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+        .mission-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+    .mission-image {
+        height: 300px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+    }
+
+    .mission-title-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 15px;
+        background-color: #f8f9fa;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 70px;
+    }
+
+    .mission-title {
+        font-size: 16px;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .btn-manage {
+        font-size: 14px;
+        color: #0033a0;
+        border: 1px solid #0033a0;
+        background-color: transparent;
+        padding: 4px 10px;
+        border-radius: 5px;
+    }
+
+        .btn-manage:hover {
+            background-color: #0033a0;
+            color: white;
+        }
+
+    .justify-center {
+        justify-content: center;
+    }
+
+    .last-row-item {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .back-button {
+        border: 1px solid #e60000;
+        color: #e60000;
+        background-color: transparent;
+        padding: 5px 15px;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+
+        .back-button:hover {
+            background-color: #e60000;
+            color: white;
+        }
+</style>
+<div class="container mt-5">
+    <h1 class="text-center mb-5">@Localizer["NASA Finance Management"]</h1>
+
+    <button class="back-button mb-4" onclick="window.location.href='/Dashboard/Modules'">
+        @Localizer["Back"]
+    </button>
+
+    <div class="row g-4 justify-content-center">
+       <div class="col-md-4">
+           <div class="mission-card" onclick="viewMission('ManageBudgets')">
+                <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/Me5fe3057ae8ae7e17203ebc25f4bd8ac1742513033779" class="mission-image" alt="Apollo Mission">
+               <div class="mission-title-container">
+                   <h3 class="mission-title">@Localizer["Add of Manage budgets"]</h3>
+                   <i class="bi bi-arrow-right module-arrow"></i>
+               </div>
+           </div>
+       </div>
+    </div>
+</div>
+
+    @section Scripts {
+        <script>
+            function viewMission(missionName) {
+                window.location.href = `/Finances/${missionName}`;
+            }
+        </script>
+    }

@@ -80,7 +80,7 @@
         </div>
 
         <div class="col-md-4">
-            <div class="module-card">
+            <div class="module-card" id="finances-card">
                 <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/Md98a6cd715f18676e548919a403dac701742584608207" class="module-image" alt="Finance">
                 <div class="module-title-container">
                     <h3 class="module-title">@Localizer["Finance"]</h3>
@@ -130,7 +130,6 @@
             card.addEventListener('click', function () {
                 const moduleName = this.querySelector('.module-title').innerText;
 
-                // Verificamos si es la tarjeta de Space Missions
                 if (this.id === "space-missions-card") {
                     // Redirige a la vista de SpaceMissions
                     window.location.href = '@Url.Action("SpaceMissions", "SpaceMissions")';
@@ -146,7 +145,10 @@
                 else if (this.id === "Experiments-card") {
                     // Redirige a la vista de Experiments
                     window.location.href = '@Url.Action("Experiment", "Experiments")';
-                }
+                }else if (this.id === "finances-card") {
+					// Redirige a la vista de Finances
+					window.location.href = '@Url.Action("Finances", "Finances")';
+				}
             });
         });
     </script>

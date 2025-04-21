@@ -129,14 +129,34 @@
                 margin: 3px 0;
             }
 
-    /* Estilo adicional para el calendario */
     #calendar {
         height: 500px;
     }
+
+    .back-button {
+        border: 1px solid #e60000;
+        color: #e60000;
+        background-color: transparent;
+        padding: 5px 15px;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+
+        .back-button:hover {
+            background-color: #e60000;
+            color: white;
+        }
 </style>
 
 <div class="apollo-header">
     <h1>@Localizer["Project Apollo"]</h1>
+    <!-- Align button to the left -->
+
+    <button type="button" class="back-button" style="float: left;" onclick="window.history.back()">  
+       @Localizer["Back"]  
+    </button>
+
     <blockquote>“@Localizer["That's one small step"]”</blockquote>
 
     <p>

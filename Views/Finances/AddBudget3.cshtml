@@ -1,0 +1,264 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@{
+    ViewData["Title"] = Localizer["AddBudget"];
+}
+<style>
+        /* Estilos comunes */
+        .back-button {
+            border: 1px solid #e60000;
+            color: #e60000;
+            background-color: transparent;
+            padding: 5px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #e60000;
+            color: white;
+        }
+
+        .save-button {
+            background-color: #0033a0;
+            color: white;
+            border: none;
+            padding: 8px 25px;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .save-button:hover {
+            background-color: #00257a;
+        }
+
+        .action-button {
+            background-color: #0033a0;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            width: 100%;
+            text-align: center;
+            display: block;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+
+        .action-button:hover {
+            background-color: #00257a;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nasa-header {
+            background-color: #000;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nasa-logo {
+            height: 40px;
+        }
+
+        .header-link {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        .user-icon {
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #dee2e6;
+        }
+
+        .card-header {
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #dee2e6;
+            font-weight: bold;
+            text-align: center;
+            padding: 12px;
+        }
+
+        .card-body {
+            padding: 15px;
+        }
+
+        .form-label {
+            font-weight: 500;
+        }
+
+        .project-card {
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .project-image {
+            width: 250px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .project-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .project-description {
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 10px;
+            min-height: 100px;
+        }
+
+        .metadata-icons {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .metadata-icon {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+    .second-row {
+        display: flex;
+        gap: 20px;
+    }
+
+        .second-row > .col-md-6 {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .second-row .card {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+            .second-row .card .card-body {
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+            }
+
+        .second-row .col-md-6:last-child .card-body {
+            justify-content: center;
+        }
+    </style>
+    <div class="container mt-4">
+    <h1 class="text-center mb-4">@Localizer["Add Budget"]</h1>
+
+    <button class="back-button mb-4" onclick="window.location.href='/Finances/ProjectBudgets'">
+        @Localizer["Back"]
+        </button>
+
+        <div class="row">
+            <div class="col-md-8">
+            <h3 class="mb-3">@Localizer["Project selected"]</h3>
+                <div class="project-card">
+                    
+                    <div class="row">
+                        <div class="col-md-4">
+                        <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/M1e6baf76a9d3d7921a10fcd6972b807f1743121477242" alt="Project" class="project-image">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="metadata-icons">
+                                <div class="metadata-icon">
+                                    <i class="bi bi-calendar"></i>
+                                    <span>##/##/####</span>
+                                </div>
+                                <div class="metadata-icon">
+                                    <i class="bi bi-tag"></i>
+                                <span>@Localizer["Category"]</span>
+                                </div>
+                                <div class="metadata-icon">
+                                    <i class="bi bi-person"></i>
+                                <span>@Localizer["User"]</span>
+                                </div>
+                            </div>
+                            <div class="project-description">
+                            @Localizer["Description"]
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                    @Localizer["Information"]
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                        <label class="form-label">@Localizer["Initial budget"]</label>
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                        <div class="mb-3">
+                        <label class="form-label">@Localizer["Budget balance"]</label>
+                            <input type="text" class="form-control" placeholder="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="row second-row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    @Localizer["Add budget"]
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label class="form-label">@Localizer["Budget addition"]</label>
+                        <div class="input-group">
+                            <span class="input-group-text">$</span>
+                            <input type="text" class="form-control" placeholder="----------------------">
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button class="save-button">@Localizer["Save"]</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    @Localizer["Manage budget"]
+                </div>
+                <div class="card-body">
+                    <button onclick="window.location.href='/Finances/ManageBudget3'" class="action-button">@Localizer["Manage Module budget"]</button>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,229 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@{
+    ViewData["Title"] = Localizer["MangeModulesBudgetTitle"];
+}
+
+<style>
+    .back-button {
+        border: 1px solid #e60000;
+        color: #e60000;
+        background-color: transparent;
+        padding: 5px 15px;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        white-space: nowrap; 
+    }
+
+    .back-button:hover {
+        background-color: #e60000;
+        color: white;
+    }
+
+    .save-button { 
+        background-color: #0033a0;
+        color: white;
+        border: none;
+        padding: 8px 25px;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+
+        .save-button:hover {
+            background-color: #00257a;
+        }
+
+    .action-button {
+        background-color: #0033a0;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        width: 100%;
+        text-align: center;
+        display: block;
+        text-decoration: none;
+        margin-bottom: 10px;
+    }
+
+        .action-button:hover {
+            background-color: #00257a;
+            color: white;
+            text-decoration: none;
+        }
+
+    .card {
+        border-radius: 8px;
+        margin-bottom: 20px;
+        border: 1px solid #dee2e6;
+    }
+
+    .card-header {
+        background-color: #f8f9fa;
+        border-bottom: 1px solid #dee2e6;
+        font-weight: bold;
+        text-align: center;
+        padding: 12px;
+    }
+
+    .card-body { 
+        padding: 15px;
+    }
+
+    .form-label { 
+        font-weight: 500;
+    }
+
+    .first-row {
+        display: flex;
+        align-items: center; 
+        justify-content: space-between;
+        margin-bottom: 30px;
+        gap: 20px; 
+    }
+
+    .first-row-left {
+        flex-shrink: 0;
+    }
+
+    .first-row-center {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 0;
+    }
+
+    .first-row-right {
+        flex-shrink: 0;
+    }
+
+
+    .select-module-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .select-module-label {
+        margin-right: 15px;
+        font-size: 30px;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    .select-module {
+        padding: 8px;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        width: 200px;
+        font-size: 16px;
+        height: fit-content;
+    }
+
+    .second-row {
+        display: flex;
+        gap: 20px;
+    }
+
+        .second-row > .col-md-6 {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .second-row .card {
+            flex-grow: 1; 
+            display: flex; 
+            flex-direction: column; 
+            width: 100%; 
+        }
+
+            .second-row .card .card-body {
+                flex-grow: 1; 
+                display: flex; 
+                flex-direction: column; 
+                
+            }
+
+        .second-row .col-md-6:last-child .card-body {
+            justify-content: center; 
+            
+        }
+</style>
+
+<div class="container mt-4">
+    <div class="first-row">
+        <div class="first-row-left">
+            <button type="button" class="back-button" onclick="window.history.back()">
+                @Localizer["Back"]
+            </button>
+        </div>
+
+        <div class="first-row-center">
+            <div class="select-module-container">
+                <h2 class="select-module-label">@Localizer["Selected module:"]</h2>
+                <select class="select-module">
+                    <option value="" selected disabled>@Localizer["-- Select a Module --"]</option>
+
+                    <option>@Localizer["Space Missions"]</option>
+                    <option>@Localizer["Experiments"]</option>
+                    <option>@Localizer["Research Programs"]</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="first-row-right" style="width: 300px;">
+            <div class="card">
+                <div class="card-header">
+                    @Localizer["Information"]
+                </div>
+                <div class="card-body">
+                    <div class="mb-3 text-center">
+                        <label class="form-label">@Localizer["Initial budget"]</label>
+                        <input type="text" class="form-control" placeholder="">
+                    </div>
+                    <div class="mb-3 text-center">
+                        <label class="form-label ">@Localizer["Budget balance"]</label>
+                        <input type="text" class="form-control" placeholder="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row second-row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    @Localizer["Add budget"]
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label class="form-label">@Localizer["Budget addition"]</label>
+                        <div class="input-group">
+                            <span class="input-group-text">$</span>
+                            <input type="text" class="form-control" placeholder="----------------------">
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button class="save-button">@Localizer["Save"]</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    @Localizer["Manage budget"]
+                </div>
+                <div class="card-body">
+                    <button onclick="window.location.href='/Finances/ManageBudget'" class="action-button">@Localizer["Manage Module budget"]</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,118 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@{
+    ViewData["Title"] = Localizer["SpaceMissionsBudgetTitle"];
+}
+
+<style>
+    .back-button {
+        border: 1px solid #e60000;
+        color: #e60000;
+        background-color: transparent;
+        padding: 5px 15px;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+
+        .back-button:hover {
+            background-color: #e60000;
+            color: white;
+        }
+
+    .action-button {
+        background-color: #0033a0;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        width: 100%;
+        text-align: center;
+        display: block;
+        text-decoration: none;
+    }
+
+        .action-button:hover {
+            background-color: #00257a;
+            color: white;
+            text-decoration: none;
+        }
+
+    .module-card {
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 15px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .module-image {
+        height: 300px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+    }
+
+    .budget-field {
+        margin-bottom: 20px;
+    }
+
+    .budget-label {
+        font-weight: bold;
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .align-buttons {
+        display: flex;
+        gap: 20px;
+        margin-top: 20px;
+    }
+</style>
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">@Localizer["Budgets"]</h1>
+
+        <button class="back-button mb-3" onclick="window.location.href='/Finances/ManageBudgets'">
+            @Localizer["Back"]
+        </button>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="mb-3 text-center">@Localizer["Selected module"]</h2>
+                <div class="module-card">
+                    <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/Mfe6a096a555925ec892723fa3c8c6e051742513866796" alt="Space Mission" class="module-image">
+                    <h3>@Localizer["Space Missions"]</h3>
+                </div>
+            </div>
+
+            <div class="col-md-6 d-flex flex-column justify-content-center align-items-center">
+                <div class="budget-field w-75">
+                    <div class="budget-label text-center">@Localizer["Total budget assigned"]</div>
+                    <div class="input-group">
+                        <span class="input-group-text">$</span>
+                        <input type="text" class="form-control" value="">
+                    </div>
+                </div>
+
+                <div class="budget-field w-75">
+                    <div class="budget-label text-center">@Localizer["Total budget spent"]</div>
+                    <div class="input-group">
+                        <span class="input-group-text">$</span>
+                        <input type="text" class="form-control" value="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <button onclick="window.location.href='/Finances/ManageModuleBudget'" class="action-button">@Localizer["Add or manage Module budget"]</button>
+            </div>
+            <div class="col-md-6">
+            <button onclick="window.location.href='/Finances/ProjectBudgets'" class="action-button">@Localizer["Add or manage Project budget"]</button>
+            </div>
+        </div>
+    </div>
