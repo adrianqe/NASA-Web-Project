@@ -1,7 +1,7 @@
 ﻿@using Microsoft.AspNetCore.Mvc.Localization
 @inject IViewLocalizer Localizer
 @{
-    ViewData["Title"] = Localizer["SpaceMissionsTitle"];
+    ViewData["Title"] = Localizer["ManageBudgetsTitle"];
 }
 
 <style>
@@ -11,20 +11,20 @@
         overflow: hidden;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         cursor: pointer;
-        height: 270px;
+        height: 300px;
         position: relative;
         margin-bottom: 20px;
     }
 
-    .mission-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    }
+        .mission-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
 
     .mission-image {
-        height: 200px;
+        height: 300px;
         width: 100%;
-        object-fit: contain;
+        object-fit: cover;
         object-position: center;
         display: block;
     }
@@ -86,54 +86,48 @@
         }
 </style>
 <div class="container mt-5">
-    <h1 class="text-center mb-5">@Localizer["SelectSpaceMission"]</h1>
+    <h1 class="text-center mb-5">@Localizer["Select Module"]</h1>
 
-    <button class="back-button mb-4" onclick="window.location.href='/Dashboard/Modules'">
+    <button class="back-button mb-4" onclick="window.location.href='/Finances/Finances'">
         @Localizer["Back"]
     </button>
 
     <div class="row g-4">
         <div class="col-md-4">
-            <div class="mission-card" onclick="viewMission('Apollo')">
-                <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/M84dfebf3cf9ca177d413ba7a95e4c7841742500396987" class="mission-image" alt="Apollo Mission">
+            <div class="mission-card" onclick="viewMission('SpaceMissions')">
+                <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/Mfe6a096a555925ec892723fa3c8c6e051742513866796" class="mission-image" alt="Apollo Mission">
                 <div class="mission-title-container">
-                    <h3 class="mission-title">@Localizer["Project Apolo"]</h3>
+                    <h3 class="mission-title">@Localizer["Space Missions"]</h3>
                     <i class="bi bi-arrow-right module-arrow"></i>
                 </div>
             </div>
         </div>
 
         <div class="col-md-4">
-            <div class="mission-card" onclick="viewMission('Gemini')">
-                <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/Mefe72fefd0e7eee8b3648c0df5f75cf81742500328940" class="mission-image" alt="Gemini Mission">
+            <div class="mission-card" onclick="viewMission('Experiments')">
+                <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/Mb080d77b3150088311f08751cad070f31742513867385" class="mission-image" alt="Gemini Mission">
                 <div class="mission-title-container">
-                    <h3 class="mission-title">@Localizer["Project Gemini"]</h3>
+                    <h3 class="mission-title">@Localizer["Experiments"]</h3>
                     <i class="bi bi-arrow-right module-arrow"></i>
                 </div>
             </div>
         </div>
 
         <div class="col-md-4">
-            <div class="mission-card" onclick="viewMission('Mercury')">
-                <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/M09b4817283b8b17ea47e971a1e0e0fc61742500486994" class="mission-image" alt="Mercury Mission">
+            <div class="mission-card" onclick="viewMission('ResearchPrograms')">
+                <img src="https://assets.mockflow.com/app/wireframepro/company/C1cfce0309136452fb8bfc82060887827/projects/MQq8G1l5Mrb/images/Mcb267048e88aaa888c05b58a3cdaa1251742514206608" class="mission-image" alt="Mercury Mission">
                 <div class="mission-title-container">
-                    <h3 class="mission-title">@Localizer["Project Mercury"]</h3>
+                    <h3 class="mission-title">@Localizer["Research Programs"]</h3>
                     <i class="bi bi-arrow-right module-arrow"></i>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="d-flex last-row-item mt-4">
-        <button class="btn-manage" onclick="window.location.href='/SpaceMissions/ManageSpaceMissions'" style="float: right;">
-			@Localizer["Manage"]
-		</button>
-</div>
-
-@section Scripts {
-    <script>
-        function viewMission(missionName) {
-            window.location.href = `/SpaceMissions/${missionName}`;
-        }
-    </script>
-}
+    @section Scripts {
+        <script>
+            function viewMission(missionName) {
+                window.location.href = `/Finances/${missionName}Budget`;
+            }
+        </script>
+    }
