@@ -121,7 +121,7 @@
     <value>Acción</value>
   </data>
   <data name="Add" xml:space="preserve">
-    <value>Agregar</value>
+    <value>Añadir</value>
   </data>
   <data name="HumanResourcesTitle" xml:space="preserve">
     <value>Departamento de Recursos Humanos</value>
@@ -137,5 +137,11 @@
   </data>
   <data name="Status" xml:space="preserve">
     <value>Estado</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Buscar</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Atrás</value>
   </data>
 </root>

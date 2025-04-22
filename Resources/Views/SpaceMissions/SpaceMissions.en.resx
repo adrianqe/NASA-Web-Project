@@ -129,4 +129,7 @@
   <data name="Project Mercury" xml:space="preserve">
     <value>Project Mercury</value>
   </data>
+  <data name="Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
 </root>

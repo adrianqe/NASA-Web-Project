@@ -117,22 +117,55 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="SelectSpaceMission" xml:space="preserve">
-    <value>Seleccionar misión espacial</value>
-  </data>
-  <data name="Project Apolo" xml:space="preserve">
-    <value>Proyecto Apolo</value>
-  </data>
-  <data name="Project Gemini" xml:space="preserve">
-    <value>Proyecto Gemini</value>
-  </data>
-  <data name="Project Mercury" xml:space="preserve">
-    <value>Proyecto Mercury</value>
-  </data>
-  <data name="Manage" xml:space="preserve">
-    <value>Gestionar</value>
+  <data name="Project selected" xml:space="preserve">
+    <value>Project selected</value>
   </data>
   <data name="Back" xml:space="preserve">
-    <value>Atrás</value>
+    <value>Back</value>
+  </data>
+  <data name="Project Apollo" xml:space="preserve">
+    <value>Project Apollo</value>
+  </data>
+  <data name="Lunar" xml:space="preserve">
+    <value>Lunar</value>
+  </data>
+  <data name="Coordinator" xml:space="preserve">
+    <value>Coordinator</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="Initial budget" xml:space="preserve">
+    <value>Initial budget</value>
+  </data>
+  <data name="Budget balance" xml:space="preserve">
+    <value>Budget balance</value>
+  </data>
+  <data name="Freeze" xml:space="preserve">
+    <value>Freeze</value>
+  </data>
+  <data name="User list" xml:space="preserve">
+    <value>User list</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Debits list" xml:space="preserve">
+    <value>Debits list</value>
+  </data>
+  <data name="Unfreeze" xml:space="preserve">
+    <value>Unfreeze</value>
+  </data>
+  <data name="SimulatingLifeOnMars" xml:space="preserve">
+    <value>Simulating Life on Mars</value>
+  </data>
+  <data name="Mars" xml:space="preserve">
+    <value>Mars</value>
+  </data>
+  <data name="Moonwalks" xml:space="preserve">
+    <value>Moonwalks</value>
   </data>
 </root>

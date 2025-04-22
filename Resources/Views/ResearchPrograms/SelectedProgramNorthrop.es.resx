@@ -117,22 +117,55 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="SelectSpaceMission" xml:space="preserve">
-    <value>Seleccionar misión espacial</value>
-  </data>
-  <data name="Project Apolo" xml:space="preserve">
-    <value>Proyecto Apolo</value>
-  </data>
-  <data name="Project Gemini" xml:space="preserve">
-    <value>Proyecto Gemini</value>
-  </data>
-  <data name="Project Mercury" xml:space="preserve">
-    <value>Proyecto Mercury</value>
-  </data>
-  <data name="Manage" xml:space="preserve">
-    <value>Gestionar</value>
+  <data name="Project selected" xml:space="preserve">
+    <value>Proyecto seleccionado</value>
   </data>
   <data name="Back" xml:space="preserve">
     <value>Atrás</value>
+  </data>
+  <data name="Project Apollo" xml:space="preserve">
+    <value>Proyecto Apolo</value>
+  </data>
+  <data name="Lunar" xml:space="preserve">
+    <value>Lunar</value>
+  </data>
+  <data name="Coordinator" xml:space="preserve">
+    <value>Coodinador</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>Información</value>
+  </data>
+  <data name="Initial budget" xml:space="preserve">
+    <value>Presupuesto inicial</value>
+  </data>
+  <data name="Budget balance" xml:space="preserve">
+    <value>Balance presupuestario</value>
+  </data>
+  <data name="Freeze" xml:space="preserve">
+    <value>Congelar</value>
+  </data>
+  <data name="User list" xml:space="preserve">
+    <value>Lista de usuarios</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Añadir</value>
+  </data>
+  <data name="Debits list" xml:space="preserve">
+    <value>Lista de débitos</value>
+  </data>
+  <data name="Unfreeze" xml:space="preserve">
+    <value>Descongelar</value>
+  </data>
+  <data name="SimulatingLifeOnMars" xml:space="preserve">
+    <value>Simulando vida en Marte</value>
+  </data>
+  <data name="Mars" xml:space="preserve">
+    <value>Marte</value>
+  </data>
+  <data name="Moonwalks" xml:space="preserve">
+    <value>Caminatas lunares</value>
   </data>
 </root>

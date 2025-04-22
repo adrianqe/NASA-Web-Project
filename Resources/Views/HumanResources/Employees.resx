@@ -117,22 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="SelectSpaceMission" xml:space="preserve">
-    <value>Seleccionar misión espacial</value>
+  <data name="Action" xml:space="preserve">
+    <value />
   </data>
-  <data name="Project Apolo" xml:space="preserve">
-    <value>Proyecto Apolo</value>
+  <data name="Add" xml:space="preserve">
+    <value />
   </data>
-  <data name="Project Gemini" xml:space="preserve">
-    <value>Proyecto Gemini</value>
+  <data name="HumanResourcesTitle" xml:space="preserve">
+    <value />
   </data>
-  <data name="Project Mercury" xml:space="preserve">
-    <value>Proyecto Mercury</value>
+  <data name="Name" xml:space="preserve">
+    <value />
   </data>
-  <data name="Manage" xml:space="preserve">
-    <value>Gestionar</value>
+  <data name="Phone" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value />
   </data>
   <data name="Back" xml:space="preserve">
-    <value>Atrás</value>
+    <value />
   </data>
 </root>

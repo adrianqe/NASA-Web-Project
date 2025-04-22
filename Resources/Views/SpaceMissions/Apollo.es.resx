@@ -204,4 +204,7 @@
   <data name="Add" xml:space="preserve">
     <value>Añadir</value>
   </data>
+  <data name="Back" xml:space="preserve">
+    <value>Atrás</value>
+  </data>
 </root>

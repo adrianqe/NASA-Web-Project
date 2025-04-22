@@ -133,4 +133,7 @@
   <data name="Manage" xml:space="preserve">
     <value>Manage</value>
   </data>
+  <data name="Back" xml:space="preserve">
+    <value />
+  </data>
 </root>

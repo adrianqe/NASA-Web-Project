@@ -32,12 +32,30 @@
         .custom-btn:focus {
             box-shadow: none;
         }
+
+    .back-button {
+        border: 1px solid #e60000;
+        color: #e60000;
+        background-color: transparent;
+        padding: 5px 15px;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+
+        .back-button:hover {
+            background-color: #e60000;
+            color: white;
+        }
 </style>
 
 
 <div class="container mt-4 col-6  section" id="section1">
     <br /><br /><br /><br />
     <h3 class="display-4 fw-bold text-center my-5">@Localizer["RegisterUser"]</h3>
+    <button class="back-button mb-4" onclick="window.location.href='/HumanResources/Employees'" style="float: left;">
+        @Localizer["Back"]
+    </button>
     <form>
         <!-- ID -->
         <div class="mb-3">
@@ -60,8 +78,7 @@
         <!-- Birth Date with Icon -->
         <div class="mb-3">
             <div class="input-group">
-                <input type="date" class="form-control" id="birthDate">
-                
+                <input type="datetime" class="form-control" id="birthDate" placeholder="MM/DD/YY">
             </div>
         </div>
 
@@ -107,6 +124,19 @@
 <script>
     document.getElementById('nextButton').addEventListener('click', function () {
         window.location.href = '@Url.Action("RegisterHR", "HumanResources")';
+    });
+    document.addEventListener('DOMContentLoaded', function () {
+        const birthDateInput = document.getElementById('birthDate');
+
+        birthDateInput.addEventListener('blur', function () {
+            const inputDate = new Date(this.value);
+            if (!isNaN(inputDate)) {
+                const mm = String(inputDate.getMonth() + 1).padStart(2, '0');
+                const dd = String(inputDate.getDate()).padStart(2, '0');
+                const yy = String(inputDate.getFullYear()).slice(-2);
+                this.value = `${mm}/${dd}/${yy}`;
+            }
+        });
     });
 </script>
 

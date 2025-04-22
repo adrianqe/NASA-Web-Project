@@ -22,14 +22,33 @@
         .list-group-horizontal .list-group-item button {
             height: 36px; /* Ajusta el botón si se ve muy alto */
         }
+
+    .back-button {
+        border: 1px solid #e60000;
+        color: #e60000;
+        background-color: transparent;
+        padding: 5px 15px;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+
+        .back-button:hover {
+            background-color: #e60000;
+            color: white;
+        }
 </style>
                                           
     <div class="text-center mt-5">
 
-    <h1 class="display-4 fw-bold">@Localizer["HumanResourcesTitle"]</h1>
+	<h1 class="display-4 fw-bold">@Localizer["HumanResourcesTitle"]</h1>
+    <button class="back-button mb-4" onclick="window.location.href='/Dashboard/Modules'" style="float: left;">
+		@Localizer["Back"]
+	</button>
         <br>
         <!-- Fila 1 -->
         <div class="row justify-content-center mb-6">
+        
             <!-- col 1 -->
 
             <div class="col-md-5 text-start">
@@ -39,7 +58,7 @@
 
             <div class="col-md-5">
                 <form class="d-flex text-end" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <input class="form-control me-2" type="search" placeholder="@Localizer["Search"]" aria-label="Search">
                 <a href="@Url.Action("Details", "Employee", new { id = 1 })" target="_blank" title="Ver detalles">
                     <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="Edit" width="24" height="24">
                 </a>
