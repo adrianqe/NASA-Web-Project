@@ -1,0 +1,113 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@{
+    ViewData["Title"] = "LoginHR";
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<style>
+    .custom-btn {
+        background-color: #bdbdbd;
+        color: black;
+        border: 1px solid #bdbdbd;
+    }
+
+        .custom-btn:hover {
+            background-color: #a0a0a0;
+            border-color: #a0a0a0;
+            color: black;
+        }
+
+
+        .custom-btn:active,
+        .custom-btn:focus,
+        .custom-btn:focus:active {
+            border-color: #8d8d8d; /* Gris más oscuro */
+            background-color: #a0a0a0; /* Un gris ligeramente más oscuro opcional */
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* Opcional para dar sensación de pulsado */
+            color: black;
+        }
+
+        .custom-btn:focus {
+            box-shadow: none;
+        }
+</style>
+
+
+<div class="container mt-4 col-6  section" id="section1">
+    <br /><br /><br /><br />
+    <h3 class="display-4 fw-bold text-center my-5">@Localizer["RegisterUser"]</h3>
+    <form>
+        <!-- ID -->
+        <div class="mb-3">
+            
+            <input type="text" class="form-control" id="id" placeholder="ID">
+        </div>
+
+        <!-- Name -->
+        <div class="mb-3">
+            
+            <input type="text" class="form-control" id="name" placeholder="@Localizer["Name"]">
+        </div>
+
+        <!-- Last Name -->
+        <div class="mb-3">
+           
+            <input type="text" class="form-control" id="lastName" placeholder="@Localizer["LastName"]">
+        </div>
+
+        <!-- Birth Date with Icon -->
+        <div class="mb-3">
+            <div class="input-group">
+                <input type="date" class="form-control" id="birthDate">
+                
+            </div>
+        </div>
+
+        <!-- Nationality Select -->
+        <div class="mb-3">
+            <select class="form-select" id="nationality">
+                <option value="" disabled selected hidden>@Localizer["SelectNationality"]</option>
+                <option value="es">@Localizer["Spanish"]</option>
+                <option value="us">@Localizer["American"]</option>
+                <option value="fr">@Localizer["French"]</option>
+                <option value="it">@Localizer["Italian"]</option>
+            </select>
+        </div>
+
+        <!-- Phone Number with Icon -->
+        <div class="mb-3">
+            
+            <div class="input-group">
+                <input type="tel" class="form-control" id="phone" placeholder="@Localizer["PhoneNumber"]">
+            </div>
+        </div>
+
+        <!-- Address -->
+        <div class="mb-3">
+            
+            <input type="text" class="form-control" id="address" placeholder="@Localizer["Address"]">
+        </div>
+
+        <!-- Position Select -->
+        
+            <div class="mb-3">
+
+            <input type="text" class="form-control" id="position" placeholder="@Localizer["Position"]">
+            </div>
+           
+        <!-- Submit Button -->
+        <button type="button" id="nextButton" class="btn btn-primary w-100 custom-btn">@Localizer["Next"]</button>
+
+    </form>
+</div>
+
+
+<script>
+    document.getElementById('nextButton').addEventListener('click', function () {
+        window.location.href = '@Url.Action("RegisterHR", "HumanResources")';
+    });
+</script>
+
+

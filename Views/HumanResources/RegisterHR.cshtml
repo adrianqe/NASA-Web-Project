@@ -1,0 +1,122 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+@{
+    ViewData["Title"] = "RegisterHR";
+}
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<style>
+    .custom-btn {
+        background-color: #bdbdbd;
+        color: black;
+        border: 1px solid #bdbdbd;
+    }
+
+        .custom-btn:hover {
+            background-color: #a0a0a0;
+            border-color: #a0a0a0;
+            color: black;
+        }
+
+
+        .custom-btn:active,
+        .custom-btn:focus,
+        .custom-btn:focus:active {
+            border-color: #8d8d8d; /* Gris más oscuro */
+            background-color: #a0a0a0; /* Un gris ligeramente más oscuro opcional */
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* Opcional para dar sensación de pulsado */
+            color: black;
+        }
+
+        .custom-btn:focus {
+            box-shadow: none;
+        }
+</style>
+
+
+<div class="container mt-4 col-6">
+    <br /><br />
+    <h3 class="display-4 fw-bold text-center my-5">@Localizer["RegisterUser"]</h3>
+    <form>
+
+        <!-- Status Select -->
+        <div class="mb-3">
+            <select class="form-select" id="status">
+                <option value="" disabled selected hidden>@Localizer["SelectStatus"]</option>
+                <option value="frozen">@Localizer["Frozen"]</option>
+                <option value="unfrozen">@Localizer["Unfrozen"]</option>
+            </select>
+        </div>
+
+        <!-- Role Select -->
+        <div class="mb-3">
+            <select class="form-select" id="role">
+                <option value="" disabled selected hidden>@Localizer["Role"]</option>
+                <option value="coordinator">@Localizer["Coordinator"]</option>
+                <option value="administrator">@Localizer["Administrator"]</option>
+                <option value="professional">@Localizer["Professional"]</option>
+                <option value="humanResources">@Localizer["HumanResources"]</option>
+            </select>
+        </div>
+
+        <!-- Department Select -->
+        <div class="mb-3">
+            <select class="form-select" id="department">
+                <option value="" disabled selected hidden>@Localizer["SelectDepartment"]</option>
+                <option value="humanResources">@Localizer["HumanResources"]</option>
+                <option value="finance">@Localizer["Finance"]</option>
+                <option value="spaceMissions">@Localizer["SpaceMissions"]</option>
+                <option value="Experiments">@Localizer["Experiments"]</option>
+                <option value="researchPrograms">@Localizer["ResearchPrograms"]</option>
+            </select>
+        </div>
+        <br />
+        <!-- Submit Button -->
+
+        <div class="container row  mb-4">
+
+            <div class="container col-md-2">
+                <img src="~/images/iris.png" alt="Scan Iris" width="50" class="me-2" />
+
+            </div>
+
+            <div class="container col-md-10">
+                <button type="button" id="scanIrisButon" class="btn btn-primary w-100 h-100 custom-btn mb-3 align-content fw-bold">@Localizer["ScanIris"]</button>
+
+            </div>
+
+
+        </div>
+
+        <div class="container row">
+
+            <div class="container col-md-2">
+                <img src="~/images/fingerprint.png" alt="Scan Iris" width="50" class="me-2" />
+            </div>
+
+            <div class="container col-md-10">
+                <button type="button" id="scanFingerButon" class="btn btn-primary w-100 h-100 custom-btn fw-bold">@Localizer["ScanFingerprint"]</button>
+
+            </div>
+
+
+        </div>
+
+
+    </form>
+</div>
+
+
+
+<script>
+    document.getElementById('scanIrisButon').addEventListener('click', function () {
+        window.location.href = '@Url.Action("Employees", "HumanResources")';
+    });
+
+     document.getElementById('scanFingerButon').addEventListener('click', function () {
+        window.location.href = '@Url.Action("Employees", "HumanResources")';
+    });
+
+</script>

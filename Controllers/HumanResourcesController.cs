@@ -18,14 +18,19 @@ namespace NASAWebPrototype.Controllers
                 // otros datos que necesites cargar
             }
             ;
-
-
-
-
-
-
             return View(model);
 
         }
+
+        public IActionResult LoginHR()
+        {
+            return View();
+        }
+
+        public IActionResult RegisterHR()
+        {
+            return View();
+        }
+
     }
 }
