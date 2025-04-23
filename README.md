@@ -30,5 +30,8 @@ docker run -p 8080:80 nasa-web
 ## ⚠️ Legal Notice
 This project is for educational purposes only and is not affiliated with or endorsed by NASA.
 
-## 📸 Screenshot
+## 📸 Screenshots
 ![image](https://github.com/user-attachments/assets/57a48d61-d10e-4701-944b-e7d28b5444d7)
+![image](https://github.com/user-attachments/assets/27d3fdba-4e2e-44b5-a487-5093f1f22fe7)
+![image](https://github.com/user-attachments/assets/a1980534-cf4e-4125-a3c8-0104cf6bd8e8)
+
